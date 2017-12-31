@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>introImageFiles</key>
+	<array>
+		<string>intro1</string>
+		<string>intro2</string>
+		<string>intro3</string>
+		<string>intro4</string>
+	</array>
+	<key>menuIconImages</key>
+	<array>
+		<string>navHome</string>
+		<string>navAbout</string>
+	</array>
+	<key>menuIconTitles</key>
+	<array>
+		<string>پیشخوان</string>
+		<string>درباره ما</string>
+	</array>
+	<key>next</key>
+	<string>بعدی</string>
+	<key>startApp</key>
+	<string>شروع برنامه</string>
+	<key>volume</key>
+	<string>شماره</string>
+	<key>defaultMagazineName</key>
+	<string>انار</string>
+	<key>versionString</key>
+	<string>نسخه ۱.۰.۰</string>
+	<key>copyRightString</key>
+	<string>© 2017 Koozeh Inst. All Rights Reserved</string>
+</dict>
+</plist>
