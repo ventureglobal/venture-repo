@@ -40,8 +40,6 @@
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
     [manager loadImageWithURL:url options:0 progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.imageView.layer setBorderColor: [[UIColor colorWithRed:237.0/255.0 green:74.0/255.0 blue:37.0/255.0 alpha:1.0] CGColor]];
-            [self.imageView.layer setBorderWidth: 2.0];
             [self.imageView setImage:image];
         });
     }];

@@ -59,8 +59,7 @@
                                         range:NSMakeRange(0, [attributeString length])];
                 [self.latestIssuePriceLabel setAttributedText:attributeString];
                 [self.latestIssueImageButton setImage:image forState:UIControlStateNormal];
-                [self.latestIssueImageButton.layer setBorderWidth:2.0];
-                [self.latestIssueImageButton.layer setBorderColor: [[UIColor colorWithRed:237.0/255.0 green:74.0/255.0 blue:37.0/255.0 alpha:1.0] CGColor]];
+                
                 [self.latestIssueImageButton setHidden:NO];
                 [self.latestIssueFreeBadgeImageView setHidden:NO];
                 [self.latestIssueProgressView setHidden:YES];

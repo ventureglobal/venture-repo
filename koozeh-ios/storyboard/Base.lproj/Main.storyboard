@@ -38,7 +38,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کـوزه، بستـري براي عرضـه مجلـه‌هاي آنلايـن" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="917-ik-cXo">
-                                        <rect key="frame" x="82" y="99" width="269" height="26"/>
+                                        <rect key="frame" x="123" y="99" width="228" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25.5" id="7S9-pU-89V"/>
                                         </constraints>
@@ -53,7 +53,7 @@
                                             <constraint firstAttribute="width" constant="346" id="Hi9-By-1r6"/>
                                             <constraint firstAttribute="height" constant="724" id="IAS-Cu-Jlg"/>
                                         </constraints>
-                                        <mutableString key="text">اپليکيشن کوزه، نخستين بستر نشر مجله‌هايي است که به صورت اختصاصي براي عرضه در فضاي وب تهيه و توليد مي‌شود. محتواي اين نشريه‌ها به همت تحريريه‌اي حرفه‌اي مانند بسياري از نشريه‌هاي تراز اول چاپي، آماده نشر مي‌شود. گروه گرافيک گروه مجلات آنلاين کوزه، با شناسايي محدوديت‌ها و قابليت‌هاي گوشي‌هاي هوشمند و تبلت‌ها، محتوا را متناسب با فضاي ديجيتال، صفحه‌آرايي مي‌کنند. گروه چندرسانه‌اي نيز با بهره‌گيري از امکان پخش صدا و تصوير در اپليکيشن کوزه براي کاربران، محتواي صوتي تصويري مهيا مي‌کنند. بدين ترتيب، کاربران مجله‌هاي کوزه اين امکان را دارند، متناسب با علاقه خود مجله‌ها را با يک کليک ساده دريافت و بارگذاري کنند. نشريه‌هاي منتشر شده در بستر کوزه به محيط ‌زيست آسيبي وارد نمي‌کنند؛ اين نشريه‌هاي سبز، هميشه در دسترس‌اند و حتي پس از دريافت، به صورت آفلاين، قابل مرور و مطالعه هستند.آرشيو نشريه‌هاي کوزه، نه خراب مي‌شود و نه از بين مي‌رود، پس با خيالي آسوده مجله‌هاي برگزيده خود را آرشيو کنيد. در هر مجله، علاوه بر امکان خواندن و مطالعه محتوا، امکان شنيدن و تماشاي تصاوير و ويدئوهاي مرتبط با گزارش‌ها و مصاحبه‌ها وجود دارد. مجله انار، نخستين مجله عرضه شده در فضاي اپ کوزه، نشريه‌اي در حوزه سبک‌زندگي است که مي‌کوشد هم آگاهي‌بخش باشد و هم سرگرم‌کننده. موسسه کوزه تحت نام موسسه فرهنگي و هنري کوزه هنر و انديشه داراي مجوز نشر در فضاي ديجيتال از وزارت فرهنگ و ارشاد اسلامي است. اين موسسه فرهنگي هنري در سال 1394 شروع به کار کرد.</mutableString>
+                                        <string key="text">اپليکيشن کوزه، نخستين بستر نشر مجله‌هايي است که به صورت اختصاصي براي عرضه در فضاي وب تهيه و توليد مي‌شود. محتواي اين نشريه‌ها به همت تحريريه‌اي حرفه‌اي مانند بسياري از نشريه‌هاي تراز اول چاپي، آماده نشر مي‌شود. گروه گرافيک گروه مجلات آنلاين کوزه، با شناسايي محدوديت‌ها و قابليت‌هاي گوشي‌هاي هوشمند و تبلت‌ها، محتوا را متناسب با فضاي ديجيتال، صفحه‌آرايي مي‌کنند. گروه چندرسانه‌اي نيز با بهره‌گيري از امکان پخش صدا و تصوير در اپليکيشن کوزه براي کاربران، محتواي صوتي تصويري مهيا مي‌کنند. بدين ترتيب، کاربران مجله‌هاي کوزه اين امکان را دارند، متناسب با علاقه خود مجله‌ها را با يک کليک ساده دريافت و بارگذاري کنند. نشريه‌هاي منتشر شده در بستر کوزه به محيط ‌زيست آسيبي وارد نمي‌کنند؛ اين نشريه‌هاي سبز، هميشه در دسترس‌اند و حتي پس از دريافت، به صورت آفلاين، قابل مرور و مطالعه هستند.آرشيو نشريه‌هاي کوزه، نه خراب مي‌شود و نه از بين مي‌رود، پس با خيالي آسوده مجله‌هاي برگزيده خود را آرشيو کنيد. در هر مجله، علاوه بر امکان خواندن و مطالعه محتوا، امکان شنيدن و تماشاي تصاوير و ويدئوهاي مرتبط با گزارش‌ها و مصاحبه‌ها وجود دارد. مجله انار، نخستين مجله عرضه شده در فضاي اپ کوزه، نشريه‌اي در حوزه سبک‌زندگي است که مي‌کوشد هم آگاهي‌بخش باشد و هم سرگرم‌کننده. موسسه کوزه تحت نام موسسه فرهنگي و هنري کوزه هنر و انديشه داراي مجوز نشر در فضاي ديجيتال از وزارت فرهنگ و ارشاد اسلامي است. اين موسسه فرهنگي هنري در سال 1394 شروع به کار کرد.</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Samim" family="Samim" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -225,19 +225,19 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVn-Dg-V1y">
-                                                    <rect key="frame" x="81" y="175" width="29" height="20.5"/>
+                                                    <rect key="frame" x="84" y="175" width="26" height="14"/>
                                                     <fontDescription key="fontDescription" name="Samim" family="Samim" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۹" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sd-3m-cDI">
-                                                    <rect key="frame" x="70" y="175" width="7" height="20.5"/>
+                                                    <rect key="frame" x="73" y="175" width="7" height="14"/>
                                                     <fontDescription key="fontDescription" name="Samim" family="Samim" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۵۰۰۰ تومان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kT0-On-TjM">
-                                                    <rect key="frame" x="62" y="194" width="48" height="19"/>
+                                                    <rect key="frame" x="65" y="194" width="45" height="13"/>
                                                     <fontDescription key="fontDescription" name="Samim" family="Samim" pointSize="11"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -271,19 +271,19 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61d-YS-Lfb">
-                                <rect key="frame" x="171" y="348" width="34" height="24"/>
+                                <rect key="frame" x="173" y="348" width="30" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Samim" family="Samim" pointSize="14"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۹" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMg-44-Yfm">
-                                <rect key="frame" x="150.5" y="348" width="8.5" height="24"/>
+                                <rect key="frame" x="151.5" y="348" width="7.5" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Samim" family="Samim" pointSize="14"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۵۰۰۰ تومان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfC-ze-7hj">
-                                <rect key="frame" x="148.5" y="376" width="56.5" height="22"/>
+                                <rect key="frame" x="150" y="368.5" width="53" height="15.5"/>
                                 <fontDescription key="fontDescription" name="Samim" family="Samim" pointSize="13"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -355,7 +355,7 @@
                                             <rect key="frame" x="329" y="3.5" width="36" height="36"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="پیشخوان" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Un-fN-Ms9">
-                                            <rect key="frame" x="246.5" y="5" width="72.5" height="34"/>
+                                            <rect key="frame" x="257" y="10.5" width="62" height="23.5"/>
                                             <fontDescription key="fontDescription" name="Samim" family="Samim" pointSize="20"/>
                                             <color key="textColor" red="0.51764705882352935" green="0.51764705882352935" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -413,7 +413,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIw-Xa-ohy">
-                                <rect key="frame" x="10" y="627.5" width="43" height="46"/>
+                                <rect key="frame" x="10" y="632.5" width="36" height="36"/>
                                 <fontDescription key="fontDescription" name="Samim" family="Samim" pointSize="20"/>
                                 <state key="normal" title="بعدی">
                                     <color key="titleColor" red="0.89411764709999997" green="0.78039215689999997" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -539,32 +539,6 @@
             </objects>
             <point key="canvasLocation" x="2628" y="1458.6206896551726"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="U3e-lN-dMv">
-            <objects>
-                <viewController id="OzM-Wk-YPf" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xfz-K8-gzd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soundplayer" translatesAutoresizingMaskIntoConstraints="NO" id="nun-p7-dna">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.59999999999999998" green="0.33725490196078434" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="nun-p7-dna" firstAttribute="bottom" secondItem="SMu-gc-ZLV" secondAttribute="bottom" id="GiA-3V-c6p"/>
-                            <constraint firstAttribute="trailing" secondItem="nun-p7-dna" secondAttribute="trailing" id="Sup-PZ-and"/>
-                            <constraint firstItem="nun-p7-dna" firstAttribute="top" secondItem="xfz-K8-gzd" secondAttribute="top" id="fly-RC-rW4"/>
-                            <constraint firstItem="nun-p7-dna" firstAttribute="leading" secondItem="xfz-K8-gzd" secondAttribute="leading" id="o0W-MI-I19"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="SMu-gc-ZLV"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n1u-7j-lnc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2628" y="-915.29235382308855"/>
-        </scene>
         <!--Page Slider View Controller-->
         <scene sceneID="qZY-ce-W2X">
             <objects>
@@ -673,7 +647,6 @@
         <image name="logoAbout" width="115" height="69"/>
         <image name="navHome" width="36" height="36"/>
         <image name="pausePlayer" width="32" height="32"/>
-        <image name="soundplayer" width="540" height="960"/>
         <image name="test" width="63" height="85"/>
     </resources>
 </document>
