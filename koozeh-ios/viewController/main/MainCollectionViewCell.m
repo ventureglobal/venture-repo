@@ -8,6 +8,7 @@
 
 #import "MainCollectionViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <AVFoundation/AVFoundation.h>
 #import "SessionManager.h"
 
 @interface MainCollectionViewCell ()
@@ -15,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *issueVolumeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *freeBadgeImageView;
 
 @end
 @implementation MainCollectionViewCell
@@ -41,6 +43,9 @@
     [manager loadImageWithURL:url options:0 progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.imageView setImage:image];
+            CGRect imageFrame = AVMakeRectWithAspectRatioInsideRect(image.size, self.imageView.frame);
+            [self.imageView setFrame:imageFrame];
+            [self.freeBadgeImageView setFrame:CGRectMake(imageFrame.origin.x, imageFrame.origin.y, imageFrame.size.width/2, imageFrame.size.width/2)];
         });
     }];
 }

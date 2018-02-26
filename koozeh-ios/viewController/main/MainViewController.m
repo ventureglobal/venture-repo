@@ -114,6 +114,11 @@
     return 1;
 }
 
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(nonnull UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    CGFloat width = (85.0F / 160.0F) * collectionView.frame.size.height;
+    return CGSizeMake(width, collectionView.frame.size.height);
+}
+
 #pragma mark - <UICollectionViewDelegate>
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     self.selectedIssueVolume = self.issues.count - indexPath.row - 2;

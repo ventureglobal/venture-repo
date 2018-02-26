@@ -8,8 +8,8 @@
 
 #import "IssueRestService.h"
 
-static NSString *const kPublicDefaultIssuesPath = @"/koozeh_replicate/public/issues/default";
-static NSString *const kPublicPagesForIssuePath = @"/koozeh_replicate/public/pages/";
+static NSString *const kPublicDefaultIssuesPath = kContextUrl @"public/issues/default";
+static NSString *const kPublicPagesForIssuePath = kContextUrl @"public/pages/";
 
 @implementation IssueRestService
 
