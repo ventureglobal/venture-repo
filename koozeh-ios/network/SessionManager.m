@@ -16,19 +16,13 @@
     
     self.responseSerializer = [AFJSONResponseSerializer serializer];
     self.requestSerializer = [AFJSONRequestSerializer serializer];
-    
     return self;
 }
 
 + (id)sharedInstance {
-    static SessionManager *_sessionManager = nil;
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _sessionManager = [[self alloc] init];
-    });
-    
-    return _sessionManager;
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:[NSString stringWithFormat:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)]
+                                 userInfo:nil];
 }
 
 @end

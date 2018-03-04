@@ -12,8 +12,8 @@
 		5D00BD851FDE85D100EB2A89 /* Issue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D00BD841FDE85D100EB2A89 /* Issue.m */; };
 		5D00BD881FDE93DE00EB2A89 /* IssueRestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D00BD871FDE93DE00EB2A89 /* IssueRestService.m */; };
 		5D00BD8C1FDE9F4500EB2A89 /* IssueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D00BD8B1FDE9F4500EB2A89 /* IssueManager.m */; };
-		5D00BD901FDEB0AA00EB2A89 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D00BD8F1FDEB0AA00EB2A89 /* MainViewController.m */; };
-		5D00BD931FDEF33800EB2A89 /* MainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D00BD921FDEF33800EB2A89 /* MainCollectionViewCell.m */; };
+		5D00BD901FDEB0AA00EB2A89 /* IssuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D00BD8F1FDEB0AA00EB2A89 /* IssuesViewController.m */; };
+		5D00BD931FDEF33800EB2A89 /* IssueCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D00BD921FDEF33800EB2A89 /* IssueCollectionViewCell.m */; };
 		5D1ACCE51FEAA08300D88056 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1ACCE41FEAA08300D88056 /* AboutViewController.m */; };
 		5D350E901FE3094D00AC749D /* UIColor+ColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D350E8F1FE3094D00AC749D /* UIColor+ColorUtil.m */; };
 		5D3CDB491FE3B5E100D7FB41 /* PageResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3CDB481FE3B5E100D7FB41 /* PageResponse.m */; };
@@ -50,6 +50,19 @@
 		5DD137031FD7CE8400D66B13 /* koozeh_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD137021FD7CE8400D66B13 /* koozeh_iosUITests.m */; };
 		5DD137201FD8136F00D66B13 /* Samim-FD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5DD1371E1FD8136E00D66B13 /* Samim-FD.ttf */; };
 		5DD137211FD8136F00D66B13 /* Samim-Bold-FD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5DD1371F1FD8136F00D66B13 /* Samim-Bold-FD.ttf */; };
+		5DDDAF012046E2DB00D36045 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDAF002046E2DB00D36045 /* LoginViewController.m */; };
+		5DDDAF042047D3BA00D36045 /* AIranianSansBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5DDDAF022047D3BA00D36045 /* AIranianSansBold.ttf */; };
+		5DDDAF052047D3BA00D36045 /* Shabnam-FD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5DDDAF032047D3BA00D36045 /* Shabnam-FD.ttf */; };
+		5DDDAF082049167700D36045 /* SignInResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDAF072049167700D36045 /* SignInResponse.m */; };
+		5DDDAF0B2049337700D36045 /* UserRestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDAF0A2049337700D36045 /* UserRestService.m */; };
+		5DDDAF0E20499E7400D36045 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDAF0D20499E7400D36045 /* UserManager.m */; };
+		5DDDAF112049A02100D36045 /* SystemUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDAF102049A02100D36045 /* SystemUtil.m */; };
+		5DDDAF142049B13000D36045 /* UIViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDAF132049B13000D36045 /* UIViewUtil.m */; };
+		5DDDAF17204A7D2600D36045 /* PingRestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDAF16204A7D2600D36045 /* PingRestService.m */; };
+		5DDDAF1D204A839F00D36045 /* PingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDAF1C204A839F00D36045 /* PingManager.m */; };
+		5DDDAF20204A87EA00D36045 /* CustomMessageBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDAF1F204A87EA00D36045 /* CustomMessageBarViewController.m */; };
+		5DDDAF23204AC9F700D36045 /* VerifyDeviceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDAF22204AC9F700D36045 /* VerifyDeviceResponse.m */; };
+		5DDDAF28204BF4C300D36045 /* SignInRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDAF27204BF4C300D36045 /* SignInRequest.m */; };
 		7045EA95C2D17C0058BDB925 /* libPods-koozeh-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 796D2C541BCDE548F4F53955 /* libPods-koozeh-ios.a */; };
 		FB8E2D53A246D019A3F6D121 /* libPods-koozeh-iosTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB54F5B9B6638E426DEA8F8 /* libPods-koozeh-iosTests.a */; };
 /* End PBXBuildFile section */
@@ -82,10 +95,10 @@
 		5D00BD871FDE93DE00EB2A89 /* IssueRestService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IssueRestService.m; sourceTree = "<group>"; };
 		5D00BD8A1FDE9F4500EB2A89 /* IssueManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IssueManager.h; sourceTree = "<group>"; };
 		5D00BD8B1FDE9F4500EB2A89 /* IssueManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IssueManager.m; sourceTree = "<group>"; };
-		5D00BD8E1FDEB0AA00EB2A89 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		5D00BD8F1FDEB0AA00EB2A89 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		5D00BD911FDEF33800EB2A89 /* MainCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewCell.h; sourceTree = "<group>"; };
-		5D00BD921FDEF33800EB2A89 /* MainCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainCollectionViewCell.m; sourceTree = "<group>"; };
+		5D00BD8E1FDEB0AA00EB2A89 /* IssuesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IssuesViewController.h; sourceTree = "<group>"; };
+		5D00BD8F1FDEB0AA00EB2A89 /* IssuesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IssuesViewController.m; sourceTree = "<group>"; };
+		5D00BD911FDEF33800EB2A89 /* IssueCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IssueCollectionViewCell.h; sourceTree = "<group>"; };
+		5D00BD921FDEF33800EB2A89 /* IssueCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IssueCollectionViewCell.m; sourceTree = "<group>"; };
 		5D1ACCE31FEAA08300D88056 /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		5D1ACCE41FEAA08300D88056 /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		5D350E8E1FE3094D00AC749D /* UIColor+ColorUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorUtil.h"; sourceTree = "<group>"; };
@@ -154,6 +167,30 @@
 		5DD137041FD7CE8400D66B13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DD1371E1FD8136E00D66B13 /* Samim-FD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Samim-FD.ttf"; sourceTree = "<group>"; };
 		5DD1371F1FD8136F00D66B13 /* Samim-Bold-FD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Samim-Bold-FD.ttf"; sourceTree = "<group>"; };
+		5DDDAEFF2046E2DB00D36045 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		5DDDAF002046E2DB00D36045 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		5DDDAF022047D3BA00D36045 /* AIranianSansBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AIranianSansBold.ttf; sourceTree = "<group>"; };
+		5DDDAF032047D3BA00D36045 /* Shabnam-FD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Shabnam-FD.ttf"; sourceTree = "<group>"; };
+		5DDDAF062049167700D36045 /* SignInResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignInResponse.h; sourceTree = "<group>"; };
+		5DDDAF072049167700D36045 /* SignInResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignInResponse.m; sourceTree = "<group>"; };
+		5DDDAF092049337700D36045 /* UserRestService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserRestService.h; sourceTree = "<group>"; };
+		5DDDAF0A2049337700D36045 /* UserRestService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserRestService.m; sourceTree = "<group>"; };
+		5DDDAF0C20499E7400D36045 /* UserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		5DDDAF0D20499E7400D36045 /* UserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
+		5DDDAF0F2049A02100D36045 /* SystemUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemUtil.h; sourceTree = "<group>"; };
+		5DDDAF102049A02100D36045 /* SystemUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemUtil.m; sourceTree = "<group>"; };
+		5DDDAF122049B13000D36045 /* UIViewUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIViewUtil.h; sourceTree = "<group>"; };
+		5DDDAF132049B13000D36045 /* UIViewUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewUtil.m; sourceTree = "<group>"; };
+		5DDDAF15204A7D2600D36045 /* PingRestService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PingRestService.h; sourceTree = "<group>"; };
+		5DDDAF16204A7D2600D36045 /* PingRestService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PingRestService.m; sourceTree = "<group>"; };
+		5DDDAF1B204A839F00D36045 /* PingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PingManager.h; sourceTree = "<group>"; };
+		5DDDAF1C204A839F00D36045 /* PingManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PingManager.m; sourceTree = "<group>"; };
+		5DDDAF1E204A87EA00D36045 /* CustomMessageBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomMessageBarViewController.h; sourceTree = "<group>"; };
+		5DDDAF1F204A87EA00D36045 /* CustomMessageBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomMessageBarViewController.m; sourceTree = "<group>"; };
+		5DDDAF21204AC9F700D36045 /* VerifyDeviceResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VerifyDeviceResponse.h; sourceTree = "<group>"; };
+		5DDDAF22204AC9F700D36045 /* VerifyDeviceResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerifyDeviceResponse.m; sourceTree = "<group>"; };
+		5DDDAF26204BF4C300D36045 /* SignInRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignInRequest.h; sourceTree = "<group>"; };
+		5DDDAF27204BF4C300D36045 /* SignInRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignInRequest.m; sourceTree = "<group>"; };
 		61E87481CB641677A870198D /* Pods-koozeh-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koozeh-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-koozeh-ios/Pods-koozeh-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		761A072C93034578FD4C4BA1 /* Pods-koozeh-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koozeh-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-koozeh-iosTests/Pods-koozeh-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		796D2C541BCDE548F4F53955 /* libPods-koozeh-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-koozeh-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,12 +267,8 @@
 		5D00BD821FDE84C500EB2A89 /* dto */ = {
 			isa = PBXGroup;
 			children = (
-				5D00BD791FDE6FC800EB2A89 /* IssueResponse.h */,
-				5D00BD7A1FDE6FC800EB2A89 /* IssueResponse.m */,
-				5D3CDB471FE3B5E100D7FB41 /* PageResponse.h */,
-				5D3CDB481FE3B5E100D7FB41 /* PageResponse.m */,
-				5D3CDB4A1FE3B7ED00D7FB41 /* MediaResponse.h */,
-				5D3CDB4B1FE3B7ED00D7FB41 /* MediaResponse.m */,
+				5DDDAF25204BF4A300D36045 /* response */,
+				5DDDAF24204BF49A00D36045 /* request */,
 			);
 			path = dto;
 			sourceTree = "<group>";
@@ -245,19 +278,23 @@
 			children = (
 				5D00BD8A1FDE9F4500EB2A89 /* IssueManager.h */,
 				5D00BD8B1FDE9F4500EB2A89 /* IssueManager.m */,
+				5DDDAF0C20499E7400D36045 /* UserManager.h */,
+				5DDDAF0D20499E7400D36045 /* UserManager.m */,
+				5DDDAF1B204A839F00D36045 /* PingManager.h */,
+				5DDDAF1C204A839F00D36045 /* PingManager.m */,
 			);
 			path = service;
 			sourceTree = "<group>";
 		};
-		5D00BD8D1FDEB06100EB2A89 /* main */ = {
+		5D00BD8D1FDEB06100EB2A89 /* issues */ = {
 			isa = PBXGroup;
 			children = (
-				5D00BD8E1FDEB0AA00EB2A89 /* MainViewController.h */,
-				5D00BD8F1FDEB0AA00EB2A89 /* MainViewController.m */,
-				5D00BD911FDEF33800EB2A89 /* MainCollectionViewCell.h */,
-				5D00BD921FDEF33800EB2A89 /* MainCollectionViewCell.m */,
+				5D00BD8E1FDEB0AA00EB2A89 /* IssuesViewController.h */,
+				5D00BD8F1FDEB0AA00EB2A89 /* IssuesViewController.m */,
+				5D00BD911FDEF33800EB2A89 /* IssueCollectionViewCell.h */,
+				5D00BD921FDEF33800EB2A89 /* IssueCollectionViewCell.m */,
 			);
-			path = main;
+			path = issues;
 			sourceTree = "<group>";
 		};
 		5D1ACCE21FEA9CDC00D88056 /* about */ = {
@@ -277,6 +314,10 @@
 				5D6BC1401FDE6645004A4B46 /* SessionManager.m */,
 				5D00BD861FDE93DE00EB2A89 /* IssueRestService.h */,
 				5D00BD871FDE93DE00EB2A89 /* IssueRestService.m */,
+				5DDDAF092049337700D36045 /* UserRestService.h */,
+				5DDDAF0A2049337700D36045 /* UserRestService.m */,
+				5DDDAF15204A7D2600D36045 /* PingRestService.h */,
+				5DDDAF16204A7D2600D36045 /* PingRestService.m */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -286,6 +327,8 @@
 			children = (
 				5D8780D31FE26DAD00CB96C4 /* CustomNavigationBarViewController.h */,
 				5D8780D41FE26DAD00CB96C4 /* CustomNavigationBarViewController.m */,
+				5DDDAF1E204A87EA00D36045 /* CustomMessageBarViewController.h */,
+				5DDDAF1F204A87EA00D36045 /* CustomMessageBarViewController.m */,
 			);
 			path = parent;
 			sourceTree = "<group>";
@@ -363,6 +406,10 @@
 				5D350E8F1FE3094D00AC749D /* UIColor+ColorUtil.m */,
 				5D3CDB5C1FE44AD400D7FB41 /* UIFont+FontUtil.h */,
 				5D3CDB5D1FE44AD400D7FB41 /* UIFont+FontUtil.m */,
+				5DDDAF0F2049A02100D36045 /* SystemUtil.h */,
+				5DDDAF102049A02100D36045 /* SystemUtil.m */,
+				5DDDAF122049B13000D36045 /* UIViewUtil.h */,
+				5DDDAF132049B13000D36045 /* UIViewUtil.m */,
 			);
 			path = utillity;
 			sourceTree = "<group>";
@@ -446,12 +493,13 @@
 		5DD137151FD7EFF100D66B13 /* viewController */ = {
 			isa = PBXGroup;
 			children = (
+				5DDDAEFE2046E2C400D36045 /* login */,
 				5D1ACCE21FEA9CDC00D88056 /* about */,
 				5DB2C84D1FE924BE00235B73 /* media */,
 				5D8780FA1FE2E28200CB96C4 /* pageSlider */,
 				5D8780D61FE2764200CB96C4 /* sliderMenu */,
 				5D8780D21FE26D8100CB96C4 /* parent */,
-				5D00BD8D1FDEB06100EB2A89 /* main */,
+				5D00BD8D1FDEB06100EB2A89 /* issues */,
 				5D988D131FD81A7B002B7C0A /* intro */,
 				5D6808511FD9C67600FE7424 /* RootViewController.h */,
 				5D6808521FD9C67600FE7424 /* RootViewController.m */,
@@ -463,11 +511,48 @@
 			isa = PBXGroup;
 			children = (
 				5DD1371F1FD8136F00D66B13 /* Samim-Bold-FD.ttf */,
+				5DDDAF022047D3BA00D36045 /* AIranianSansBold.ttf */,
+				5DDDAF032047D3BA00D36045 /* Shabnam-FD.ttf */,
 				5DD1371E1FD8136E00D66B13 /* Samim-FD.ttf */,
 				5DD136E71FD7CE8400D66B13 /* Assets.xcassets */,
 				5D988D1C1FD81FAE002B7C0A /* Messages.plist */,
 			);
 			path = resources;
+			sourceTree = "<group>";
+		};
+		5DDDAEFE2046E2C400D36045 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				5DDDAEFF2046E2DB00D36045 /* LoginViewController.h */,
+				5DDDAF002046E2DB00D36045 /* LoginViewController.m */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		5DDDAF24204BF49A00D36045 /* request */ = {
+			isa = PBXGroup;
+			children = (
+				5DDDAF26204BF4C300D36045 /* SignInRequest.h */,
+				5DDDAF27204BF4C300D36045 /* SignInRequest.m */,
+			);
+			path = request;
+			sourceTree = "<group>";
+		};
+		5DDDAF25204BF4A300D36045 /* response */ = {
+			isa = PBXGroup;
+			children = (
+				5D00BD791FDE6FC800EB2A89 /* IssueResponse.h */,
+				5D00BD7A1FDE6FC800EB2A89 /* IssueResponse.m */,
+				5D3CDB471FE3B5E100D7FB41 /* PageResponse.h */,
+				5D3CDB481FE3B5E100D7FB41 /* PageResponse.m */,
+				5D3CDB4A1FE3B7ED00D7FB41 /* MediaResponse.h */,
+				5D3CDB4B1FE3B7ED00D7FB41 /* MediaResponse.m */,
+				5DDDAF062049167700D36045 /* SignInResponse.h */,
+				5DDDAF072049167700D36045 /* SignInResponse.m */,
+				5DDDAF21204AC9F700D36045 /* VerifyDeviceResponse.h */,
+				5DDDAF22204AC9F700D36045 /* VerifyDeviceResponse.m */,
+			);
+			path = response;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -586,8 +671,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D988D1D1FD81FAE002B7C0A /* Messages.plist in Resources */,
+				5DDDAF052047D3BA00D36045 /* Shabnam-FD.ttf in Resources */,
 				5DD136EB1FD7CE8400D66B13 /* LaunchScreen.storyboard in Resources */,
 				5DD136E81FD7CE8400D66B13 /* Assets.xcassets in Resources */,
+				5DDDAF042047D3BA00D36045 /* AIranianSansBold.ttf in Resources */,
 				5DD137201FD8136F00D66B13 /* Samim-FD.ttf in Resources */,
 				5DD137211FD8136F00D66B13 /* Samim-Bold-FD.ttf in Resources */,
 				5D8780F01FE2768E00CB96C4 /* menu-button@2x.png in Resources */,
@@ -765,6 +852,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D3CDB4F1FE3E89900D7FB41 /* Page.m in Sources */,
+				5DDDAF0B2049337700D36045 /* UserRestService.m in Sources */,
 				5D350E901FE3094D00AC749D /* UIColor+ColorUtil.m in Sources */,
 				5DD136EE1FD7CE8400D66B13 /* main.m in Sources */,
 				5D6808501FD9C4C900FE7424 /* IntroPageViewController.m in Sources */,
@@ -773,23 +861,33 @@
 				5D3CDB491FE3B5E100D7FB41 /* PageResponse.m in Sources */,
 				5D3CDB4C1FE3B7ED00D7FB41 /* MediaResponse.m in Sources */,
 				5D3CDB551FE3FD7700D7FB41 /* PageContentViewController.m in Sources */,
+				5DDDAF0E20499E7400D36045 /* UserManager.m in Sources */,
 				5D8780FD1FE2E2C900CB96C4 /* PageSliderViewController.m in Sources */,
 				5D1ACCE51FEAA08300D88056 /* AboutViewController.m in Sources */,
 				5D6808531FD9C67600FE7424 /* RootViewController.m in Sources */,
+				5DDDAF28204BF4C300D36045 /* SignInRequest.m in Sources */,
 				5D00BD881FDE93DE00EB2A89 /* IssueRestService.m in Sources */,
 				5D8780F21FE2768E00CB96C4 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
-				5D00BD901FDEB0AA00EB2A89 /* MainViewController.m in Sources */,
+				5DDDAF20204A87EA00D36045 /* CustomMessageBarViewController.m in Sources */,
+				5D00BD901FDEB0AA00EB2A89 /* IssuesViewController.m in Sources */,
 				5D3CDB581FE4390400D7FB41 /* RightMenuViewController.m in Sources */,
+				5DDDAF142049B13000D36045 /* UIViewUtil.m in Sources */,
+				5DDDAF112049A02100D36045 /* SystemUtil.m in Sources */,
 				5D00BD851FDE85D100EB2A89 /* Issue.m in Sources */,
 				5D00BD7B1FDE6FC800EB2A89 /* IssueResponse.m in Sources */,
 				5D3CDB5E1FE44AD400D7FB41 /* UIFont+FontUtil.m in Sources */,
 				5DD136E01FD7CE8400D66B13 /* AppDelegate.m in Sources */,
+				5DDDAF012046E2DB00D36045 /* LoginViewController.m in Sources */,
 				5DB2C8501FE9258900235B73 /* MediaViewController.m in Sources */,
-				5D00BD931FDEF33800EB2A89 /* MainCollectionViewCell.m in Sources */,
+				5DDDAF082049167700D36045 /* SignInResponse.m in Sources */,
+				5D00BD931FDEF33800EB2A89 /* IssueCollectionViewCell.m in Sources */,
 				5D8780F31FE2768E00CB96C4 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
+				5DDDAF1D204A839F00D36045 /* PingManager.m in Sources */,
+				5DDDAF17204A7D2600D36045 /* PingRestService.m in Sources */,
 				5D3CDB5B1FE43AAA00D7FB41 /* RightMenuViewCell.m in Sources */,
 				5D8780F11FE2768E00CB96C4 /* SlideNavigationController.m in Sources */,
 				5D988D161FD81A91002B7C0A /* IntroPageContentViewController.m in Sources */,
+				5DDDAF23204AC9F700D36045 /* VerifyDeviceResponse.m in Sources */,
 				5D8780F61FE2768E00CB96C4 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				5D8780F51FE2768E00CB96C4 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				5D00BD8C1FDE9F4500EB2A89 /* IssueManager.m in Sources */,

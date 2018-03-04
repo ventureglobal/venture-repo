@@ -31,5 +31,35 @@
 	<string>نسخه ۱.۰.۰</string>
 	<key>copyRightString</key>
 	<string>© 2017 Koozeh Inst. All Rights Reserved</string>
+	<key>signInLabelString</key>
+	<string>شماره همراه</string>
+	<key>signInMainActionString</key>
+	<string>ورود / ثبت نام</string>
+	<key>signInSecondaryActionString</key>
+	<string>ورود به عنوان مهمان</string>
+	<key>signInTextFieldPlaceHolder</key>
+	<string>0 9 - - - - - - - - -</string>
+	<key>verifyMobileLabelString</key>
+	<string>کد تأییدیه را اینجا وارد کنید</string>
+	<key>verifyMobileMainActionString</key>
+	<string>ثبت و ورود</string>
+	<key>verifyMobileSecondaryActionString</key>
+	<string>ارسال مجدد کد تأییدیه</string>
+	<key>verifyMobileTextFieldPlaceHolder</key>
+	<string>- - - - -</string>
+	<key>errorOkString</key>
+	<string>متوجه شدم</string>
+	<key>errorGeneralTitle</key>
+	<string>خطای ناشناخته</string>
+	<key>errorGeneralMessage</key>
+	<string>متأسفانه خطایی در برنامه رخ داده است. مجدداً تلاش کنید.</string>
+	<key>errorNetworkTitle</key>
+	<string>ارتباط با سرور</string>
+	<key>errorNetworkMessage</key>
+	<string>ارتباط با سرور کوزه امکان پذیر نمی‌باشد. تنظیمات شبکه خود را بررسی کنید. سپس مجددا امتحان کنید.</string>
+	<key>errorWrongVerificationCodeTitle</key>
+	<string>خطا کد تأییدیه</string>
+	<key>errorWrongVerificationCodeMessage</key>
+	<string>کد تأییدیه اشتباه است. لطفا کدی که از طریق پیامک دریافت کردید را وارد کنید.</string>
 </dict>
 </plist>

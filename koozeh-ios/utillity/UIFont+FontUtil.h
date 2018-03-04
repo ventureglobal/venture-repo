@@ -12,6 +12,8 @@
 
 + (instancetype)mainRegularFontWithSize:(CGFloat)size;
 + (instancetype)mainBoldFontWithSize:(CGFloat)size;
++ (instancetype)iranianSansBoldWithSize:(CGFloat)size;
++ (instancetype)shabnamWithSize:(CGFloat)size;
 + (CGSize)labelSizeForString:(NSString *)text font:(UIFont *)font;
 
 @end

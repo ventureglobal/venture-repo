@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "SlideNavigationController.h"
+#import "CustomMessageBarViewController.h"
 
-@interface CustomNavigationBarViewController : UIViewController <SlideNavigationControllerDelegate>
+@interface CustomNavigationBarViewController : CustomMessageBarViewController <SlideNavigationControllerDelegate, CustomMessageBarDelegate>
 
 - (void)setDefaultNavigationTitle;
 

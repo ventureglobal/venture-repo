@@ -18,6 +18,22 @@
     return [UIColor colorWithRed:35.0/255.0 green:95.0/255.0 blue:131.0/255.0 alpha:1.0];
 }
 
++ (UIColor *)messageBarTextColor {
+    return [UIColor whiteColor];
+}
+
++ (UIColor *)messageBarBackColor {
+    return [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:0.7];
+}
+
++ (UIColor *)generalLogoColor {
+    return [UIColor colorWithRed:228.0/255.0 green:199.0/255.0 blue:45.0/255.0 alpha:1.0];
+}
+
++ (UIColor *)generalLogoDarkColor {
+    return [UIColor colorWithRed:198.0/255.0 green:169.0/255.0 blue:15.0/255.0 alpha:1.0];
+}
+
 + (UIColor *)menuIconColor {
     return [UIColor colorWithRed:132.0/255.0 green:132.0/255.0 blue:132.0/255.0 alpha:1.0];
 }

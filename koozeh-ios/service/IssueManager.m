@@ -27,7 +27,9 @@
     return issueManager;
 }
 
-- (void)fetchPublicDefaultIssues:(void (^)(NSArray<Issue *> *))success failure:(void (^)(NSError *))failure {
+- (void)fetchPublicDefaultIssues:(void (^)(NSArray<Issue *> *))success
+                         failure:(void (^)(NSError *))failure
+              messageBarDelegate:(id<CustomMessageBarDelegate>) messageBarDalegate {
     [[IssueRestService sharedInstance] getPublicDefaultIssues:^(NSArray<IssueResponse *> *response) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             NSMutableArray<Issue *> *issues = [NSMutableArray array];
@@ -35,18 +37,23 @@
                 [issues addObject:[[Issue alloc] initWithDto:issueResponse]];
             }
             dispatch_async(dispatch_get_main_queue(), ^{
+                [messageBarDalegate hideInternetConnectionError];
                 success(issues);
             });
         });
     } failure:^(NSError *error) {
         NSLog(@"Error while fetching issues:%@", [error localizedDescription]);
         dispatch_async(dispatch_get_main_queue(), ^{
+            [messageBarDalegate checkInternetConnection];
             failure(error);
         });
     }];
 }
 
-- (void)fetchPublicPagesForIssue:(Issue *)issue success:(void (^)(NSArray<Page *> *))success failure:(void (^)(NSError *))failure {
+- (void)fetchPublicPagesForIssue:(Issue *)issue
+                         success:(void (^)(NSArray<Page *> *))success
+                         failure:(void (^)(NSError *))failure
+              messageBarDelegate:(id<CustomMessageBarDelegate>) messageBarDalegate {
     [[IssueRestService sharedInstance]
      getPublicPagesForIssue:issue
      success:^(NSArray<PageResponse *> *response) {
@@ -56,12 +63,14 @@
                  [pages addObject:[[Page alloc] initWithDto:pageResponse]];
              }
              dispatch_async(dispatch_get_main_queue(), ^{
+                 [messageBarDalegate hideInternetConnectionError];
                  success(pages);
              });
          });
      } failure:^(NSError *error) {
          NSLog(@"Error while fetching issues:%@", [error localizedDescription]);
          dispatch_async(dispatch_get_main_queue(), ^{
+             [messageBarDalegate checkInternetConnection];
              failure(error);
          });
      }];

@@ -9,12 +9,19 @@
 #import <Foundation/Foundation.h>
 #import "Issue.h"
 #import "Page.h"
+#import "CustomMessageBarViewController.h"
 
 @interface IssueManager : NSObject
 
 + (instancetype)sharedInstance;
 
-- (void)fetchPublicDefaultIssues:(void (^)(NSArray<Issue *> *issues))success failure:(void (^)(NSError *error))failure;
-- (void)fetchPublicPagesForIssue:(Issue *)issue success:(void (^)(NSArray<Page *> *))success failure:(void (^)(NSError *))failure;
+- (void)fetchPublicDefaultIssues:(void (^)(NSArray<Issue *> *issues))success
+                         failure:(void (^)(NSError *error))failure
+              messageBarDelegate:(id<CustomMessageBarDelegate>) messageBarDalegate;
+
+- (void)fetchPublicPagesForIssue:(Issue *)issue
+                         success:(void (^)(NSArray<Page *> *))success
+                         failure:(void (^)(NSError *))failure
+              messageBarDelegate:(id<CustomMessageBarDelegate>) messageBarDalegate;
 
 @end

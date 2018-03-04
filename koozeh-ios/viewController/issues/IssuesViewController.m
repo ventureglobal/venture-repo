@@ -6,15 +6,15 @@
 //  Copyright © 2017 Anar. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "IssuesViewController.h"
 #import "IssueManager.h"
 #import "Issue.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "SessionManager.h"
-#import "MainCollectionViewCell.h"
+#import "IssueCollectionViewCell.h"
 #import "PageSliderViewController.h"
 
-@interface MainViewController ()
+@interface IssuesViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *latestIssueImageButton;
 @property (weak, nonatomic) IBOutlet UIImageView *latestIssueFreeBadgeImageView;
 @property (weak, nonatomic) IBOutlet UIProgressView *latestIssueProgressView;
@@ -27,7 +27,7 @@
 
 @end
 
-@implementation MainViewController
+@implementation IssuesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -71,7 +71,7 @@
         }
     } failure:^(NSError *error) {
         NSLog(@"Error whild using issue manager:%@", [error localizedDescription]);
-    }];
+    } messageBarDelegate:self];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -100,7 +100,7 @@
 #pragma mark - <UICollectionViewDataSource>
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    MainCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionViewCell" forIndexPath:indexPath];
+    IssueCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionViewCell" forIndexPath:indexPath];
     cell.issue = [self.issues objectAtIndex:indexPath.row + 1];
     cell.issueVolume = self.issues.count - indexPath.row - 2;
     return cell;
@@ -123,10 +123,6 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     self.selectedIssueVolume = self.issues.count - indexPath.row - 2;
     self.selectedIssue = [self.issues objectAtIndex:indexPath.row + 1];
-//    PageSliderViewController *pageSiderViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageSliderViewController"];
-//    pageSiderViewController.issue = selectedIssue;
-//    pageSiderViewController.issueVolume = self.issues.count - indexPath.row - 1;
-//    [self.navigationController pushViewController:pageSiderViewController animated:YES];
     [self performSegueWithIdentifier:@"showIssueSegue" sender:self];
 }
 

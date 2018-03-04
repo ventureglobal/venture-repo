@@ -30,7 +30,12 @@
         [userDefaults synchronize];
         [self performSegueWithIdentifier:@"RootIntroSegueIdentifier" sender:nil];
     } else {
-        [self performSegueWithIdentifier:@"landingSegueIdentifier" sender:nil];
+        NSString *userToken = [userDefaults stringForKey:@"userToken"];
+        if (userToken == nil) {
+            [self performSegueWithIdentifier:@"showLoginViewSegue" sender:nil];
+        } else {
+            [self performSegueWithIdentifier:@"showMainViewSegue" sender:nil];
+        }
     }
 }
 

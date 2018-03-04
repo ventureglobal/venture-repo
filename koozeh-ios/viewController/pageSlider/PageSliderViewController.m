@@ -105,7 +105,8 @@
         [self.pageViewController.view setHidden:YES];
         [self.loadingActivityIndicator setHidden:NO];
         [self.view bringSubviewToFront:self.loadingActivityIndicator];
-        [[IssueManager sharedInstance] fetchPublicPagesForIssue:self.issue success:^(NSArray *pages) {
+        [[IssueManager sharedInstance] fetchPublicPagesForIssue:self.issue
+                                                        success:^(NSArray *pages) {
             self.pages = pages;
             for (Page *page in pages) {
                 NSLog(@"GotPagewithId:%ld pageNumber:%ld url:%@", page.identity, page.pageNumber, page.imageUrl);
@@ -129,7 +130,7 @@
             self.fullLoaded = YES;
         } failure:^(NSError *error) {
             NSLog(@"Error whild using issue manager:%@", [error localizedDescription]);
-        }];
+        } messageBarDelegate:self];
     }
 }
 

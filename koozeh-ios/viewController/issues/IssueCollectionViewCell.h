@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Issue.h"
 
-@interface MainCollectionViewCell : UICollectionViewCell
+@interface IssueCollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) Issue *issue;
 @property (nonatomic) NSInteger issueVolume;

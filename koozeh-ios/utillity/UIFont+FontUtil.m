@@ -18,6 +18,14 @@
     return [UIFont fontWithName:@"Samim-Bold" size:size];
 }
 
++ (instancetype)iranianSansBoldWithSize:(CGFloat)size {
+    return [UIFont fontWithName:@"Samim" size:size];
+}
+
++ (instancetype)shabnamWithSize:(CGFloat)size {
+    return [UIFont fontWithName:@"Samim-Bold" size:size];
+}
+
 + (CGSize)labelSizeForString:(NSString *)text font:(UIFont *)font {
     return [text boundingRectWithSize:CGSizeMake(100, 40)
                               options:NSStringDrawingUsesLineFragmentOrigin

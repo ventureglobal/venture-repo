@@ -52,4 +52,15 @@ static NSString *const kPublicPagesForIssuePath = kContextUrl @"public/pages/";
              }];
 }
 
++ (id)sharedInstance {
+    static IssueRestService *_sessionManager = nil;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sessionManager = [[self alloc] init];
+    });
+    
+    return _sessionManager;
+}
+
 @end

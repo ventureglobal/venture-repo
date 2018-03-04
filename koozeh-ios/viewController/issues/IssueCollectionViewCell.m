@@ -6,12 +6,12 @@
 //  Copyright © 2017 Anar. All rights reserved.
 //
 
-#import "MainCollectionViewCell.h"
+#import "IssueCollectionViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <AVFoundation/AVFoundation.h>
 #import "SessionManager.h"
 
-@interface MainCollectionViewCell ()
+@interface IssueCollectionViewCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *issueVolumeLabel;
@@ -19,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *freeBadgeImageView;
 
 @end
-@implementation MainCollectionViewCell
+@implementation IssueCollectionViewCell
 
 - (void)setIssue:(Issue *)issue {
     _issue = issue;

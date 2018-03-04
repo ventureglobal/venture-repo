@@ -10,7 +10,7 @@
 #import "MessageUtil.h"
 #import "RightMenuViewCell.h"
 #import "SlideNavigationController.h"
-#import "MainViewController.h"
+#import "IssuesViewController.h"
 #import "UIFont+FontUtil.h"
 #import "UIColor+ColorUtil.h"
 
@@ -128,9 +128,9 @@ static NSInteger const ROW_HEIGHT = 46;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [[SlideNavigationController sharedInstance] closeMenuWithCompletion:^{
         if (indexPath.row == 0) {
-            if (![[SlideNavigationController sharedInstance].topViewController isKindOfClass:[MainViewController class]]) {
+            if (![[SlideNavigationController sharedInstance].topViewController isKindOfClass:[IssuesViewController class]]) {
                 for (UIViewController *viewController in [SlideNavigationController sharedInstance].viewControllers) {
-                    if ([viewController isKindOfClass:[MainViewController class]]) {
+                    if ([viewController isKindOfClass:[IssuesViewController class]]) {
                         [[SlideNavigationController sharedInstance] popToViewController:viewController animated:YES];
                         break;
                     }

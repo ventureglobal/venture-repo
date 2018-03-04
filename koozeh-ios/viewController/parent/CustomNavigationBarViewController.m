@@ -12,6 +12,8 @@
 
 @interface CustomNavigationBarViewController ()
 
+@property (weak, nonatomic) UIView *messageBar;
+
 @end
 
 @implementation CustomNavigationBarViewController
@@ -72,6 +74,11 @@
 
 -(BOOL)slideNavigationControllerShouldDisplayLeftMenu {
     return NO;
+}
+
+#pragma mark - <CustomMessageBarDelegate>
+- (CGPoint)customMessageBarPosition {
+    return CGPointMake(0, 60);
 }
 
 @end

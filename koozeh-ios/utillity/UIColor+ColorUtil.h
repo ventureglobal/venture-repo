@@ -12,7 +12,13 @@
 
 + (UIColor *)navBarTintColor;
 
++ (UIColor *)generalLogoColor;
++ (UIColor *)generalLogoDarkColor;
+
 + (UIColor *)navBarBackColor;
+
++ (UIColor *)messageBarTextColor;
++ (UIColor *)messageBarBackColor;
 
 + (UIColor *)menuIconColor;
 

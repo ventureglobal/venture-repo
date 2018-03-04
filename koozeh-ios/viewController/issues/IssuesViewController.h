@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "CustomNavigationBarViewController.h"
 
-@interface MainViewController : CustomNavigationBarViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface IssuesViewController : CustomNavigationBarViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @end
