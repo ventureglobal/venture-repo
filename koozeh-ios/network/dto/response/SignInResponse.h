@@ -11,6 +11,6 @@
 
 @interface SignInResponse : MTLModel <MTLJSONSerializing>
 
-@property (nonatomic) long deviceIdentity;
+@property (nonatomic) long deviceId;
 
 @end

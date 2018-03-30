@@ -9,13 +9,19 @@
 #import "AppDelegate.h"
 #import "SlideNavigationController.h"
 #import "RightMenuViewController.h"
+#import "UIColor+ColorUtil.h"
+#import "UIFont+FontUtil.h"
+#import "MessageUtil.h"
+#import <Realm/Realm.h>
 
 @interface AppDelegate ()
+
+@property (strong, nonatomic) NSString *messageKey;
+@property (strong, nonatomic) UITextView *messageBarTextView;
 
 @end
 
 @implementation AppDelegate
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
@@ -42,6 +48,22 @@
         NSString *menu = note.userInfo[@"menu"];
         NSLog(@"Revealed %@", menu);
     }];
+    
+    RLMRealmConfiguration *config = [RLMRealmConfiguration defaultConfiguration];
+    // Set the new schema version. This must be greater than the previously used
+    // version (if you've never set a schema version before, the version is 0).
+    config.schemaVersion = 1;
+    
+    // Set the block which will be called automatically when opening a Realm with a
+    // schema version lower than the one set above
+    config.migrationBlock = ^(RLMMigration *migration, uint64_t oldSchemaVersion) {
+        // We haven’t migrated anything yet, so oldSchemaVersion == 0
+        if (oldSchemaVersion < 1) {
+            // Nothing to do!
+            // Realm will automatically detect new properties and removed properties
+            // And will update the schema on disk automatically
+        }
+    };
     
     return YES;
 }
@@ -73,6 +95,13 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+-(UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+{
+    if(self.restrictRotation)
+        return UIInterfaceOrientationMaskPortrait;
+    else
+        return UIInterfaceOrientationMaskAll;
+}
 
 #pragma mark - Core Data stack
 
@@ -118,4 +147,38 @@
 //        abort();
 //    }
 //}
+
+#pragma mark - Setters and Getters
+- (UITextView *)messageBarTextView {
+    if (_messageBarTextView == nil) {
+        UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
+        CGPoint position = CGPointMake(window.frame.origin.x, window.frame.origin.y + window.frame.size.height - 60);
+        CGRect frame =  CGRectMake(position.x, position.y , window.frame.size.width, 60);
+        _messageBarTextView = [[UITextView alloc] initWithFrame:frame];
+        [_messageBarTextView setBackgroundColor:[UIColor messageBarBackColor]];
+        [_messageBarTextView setTextColor:[UIColor messageBarTextColor]];
+        [_messageBarTextView setFont: [UIFont shabnamWithSize:12]];
+        [_messageBarTextView setTextAlignment:NSTextAlignmentRight];
+        _messageBarTextView.hidden = YES;
+    }
+    return _messageBarTextView;
+}
+
+#pragma mark - Public Methods
+- (void)showMessageBarForKey:(NSString *)messageKey {
+    UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
+    if (![[window subviews] containsObject:self.messageBarTextView]) {
+        [window addSubview:self.messageBarTextView];
+    }
+    self.messageBarTextView.text = [MessageUtil messageForKey:messageKey];
+    self.messageKey = messageKey;
+    self.messageBarTextView.hidden = NO;
+}
+
+- (void)hideMessageBarForKey:(NSString *)messageKey {
+    if ([self.messageKey isEqualToString:messageKey]) {
+        self.messageBarTextView.hidden = YES;
+    }
+}
+
 @end

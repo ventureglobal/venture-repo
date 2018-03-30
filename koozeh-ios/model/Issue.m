@@ -11,15 +11,29 @@
 @implementation Issue
 
 - (instancetype)initWithDto:(IssueResponse *)response {
-    self = [super init];
-    if (self) {
-        self.identity = response.identity;
-        self.date = response.date;
-        self.imageUrl = response.imageUrl;
-        self.thumbnailUrl = response.thumbnailUrl;
-        self.isOffline = NO;
-    }
-    return self;
+    return [self initWithValue:
+  @{
+    @"id":@(response.id),
+    @"date":response.date,
+    @"imageUrl":response.imageUrl,
+    @"thumbnailUrl":response.thumbnailUrl,
+    @"pages":@[],
+    @"issueNumber":@(response.issueNumber),
+    @"price":@(response.price),
+    @"free":@(response.free),
+    @"pageCount":@(response.pageCount),
+    @"issueDescription":response.issueDescription,
+    @"purchased":@(response.purchased)
+    }];
+}
+
+#pragma mark - RLM Configs
++ (NSString *)primaryKey {
+    return @"id";
+}
+
++ (NSArray<NSString *> *)indexedProperties {
+    return @[@"issueNumber"];
 }
 
 @end

@@ -12,12 +12,18 @@
 	<key>menuIconImages</key>
 	<array>
 		<string>navHome</string>
+		<string>navBookmarks</string>
+		<string>navProfile</string>
 		<string>navAbout</string>
+		<string>navSupport</string>
 	</array>
 	<key>menuIconTitles</key>
 	<array>
 		<string>پیشخوان</string>
+		<string>نشان شده‌ها</string>
+		<string>شناسه</string>
 		<string>درباره ما</string>
+		<string>پشتیبانی</string>
 	</array>
 	<key>next</key>
 	<string>بعدی</string>
@@ -28,7 +34,7 @@
 	<key>defaultMagazineName</key>
 	<string>انار</string>
 	<key>versionString</key>
-	<string>نسخه ۱.۰.۰</string>
+	<string>نسخه ۲.۰.۰</string>
 	<key>copyRightString</key>
 	<string>© 2017 Koozeh Inst. All Rights Reserved</string>
 	<key>signInLabelString</key>
@@ -49,6 +55,8 @@
 	<string>- - - - -</string>
 	<key>errorOkString</key>
 	<string>متوجه شدم</string>
+	<key>errorCancelString</key>
+	<string>لغو</string>
 	<key>errorGeneralTitle</key>
 	<string>خطای ناشناخته</string>
 	<key>errorGeneralMessage</key>
@@ -61,5 +69,76 @@
 	<string>خطا کد تأییدیه</string>
 	<key>errorWrongVerificationCodeMessage</key>
 	<string>کد تأییدیه اشتباه است. لطفا کدی که از طریق پیامک دریافت کردید را وارد کنید.</string>
+	<key>errorUnauthorizeTitle</key>
+	<string>خطای حق دسترسی</string>
+	<key>errorUnauthorizeMessage</key>
+	<string>برای انجام این کار بایستی ثبت نام / وارد شوید.</string>
+	<key>pageIndexFormatMessage</key>
+	<string>صفحه %ld</string>
+	<key>downloadProgressTitle</key>
+	<string>دانلود</string>
+	<key>downloadProgressMessage</key>
+	<string>در حال دانلود مجله</string>
+	<key>cancelActionTitle</key>
+	<string>لغو</string>
+	<key>runInBackgroundActionTitle</key>
+	<string>پس ضمینه</string>
+	<key>issueTitleFormatMessage</key>
+	<string>شماره %ld - %@</string>
+	<key>persianMonth</key>
+	<array>
+		<string>فروردین</string>
+		<string>اردیبهشت</string>
+		<string>خرداد</string>
+		<string>تیر</string>
+		<string>مرداد</string>
+		<string>شهریور</string>
+		<string>مهر</string>
+		<string>آبان</string>
+		<string>آذر</string>
+		<string>دی</string>
+		<string>بهمن</string>
+		<string>اسفند</string>
+	</array>
+	<key>namePlaceHolderMessage</key>
+	<string>اسمتان را وارد کنید</string>
+	<key>mobilePlaceHolderMessage</key>
+	<string>شماره موبایل</string>
+	<key>birthDatePlaceHolderMessage</key>
+	<string>تاریخ تولدتان را وارد کنید</string>
+	<key>emailPlaceHolderMessage</key>
+	<string>آدرس ایمیلتان را وارد کنید</string>
+	<key>issueShowcaseDownloadTitle</key>
+	<string>دانلود و خرید</string>
+	<key>issueShowcaseDownloadMessage</key>
+	<string>خريداری و یا دانلود مجله برای دسترسی آسان و بدون نیاز به اینترنت</string>
+	<key>pageSliderShowcaseBookmarkTitle</key>
+	<string>نشان گذاری</string>
+	<key>pageSliderShowcaseBookmarkMessage</key>
+	<string>صفحات مورد علاقه‌تان را نشان گذاری و بعدا به آنها مراجعه کنید</string>
+	<key>pageSliderShowcaseThumbnailTitle</key>
+	<string>لیست صفحات</string>
+	<key>pageSliderShowcaseThumbnailMessage</key>
+	<string>با استفاده از لیست صفحات را سریع‌تر و در اندازه کوچک مشاهده کنید</string>
+	<key>pageContentMediaShowcaseTitle</key>
+	<string>چندرسانه‌ای‌ها</string>
+	<key>pageContentMediaShowcaseMessage</key>
+	<string>فايل های ويدئو ، تصاوير و یا فايل های صوتی را در هر صفحه مشاهده کنید</string>
+	<key>pageSliderShowcaseSlideTitle</key>
+	<string>ورق زدن مجلات</string>
+	<key>pageSliderShowcaseSlideMessage</key>
+	<string>صفحات را از راست به چپ و يا برعکس ورق بزنيد. برای خواندن متن ها می توانيد با ضربه زدن به هر صفحه، آنرا بزرگتر و بر روی متن مورد نظرخود، زوم کنيد</string>
+	<key>errorCodeRequiredValidationTitle</key>
+	<string>خطای اطلاعات</string>
+	<key>errorCodeRequiredValidationMessage</key>
+	<string>لطفا کد دریافتی از طریق پیامک را وارد کنید</string>
+	<key>errorMobileRequiredValidationTitle</key>
+	<string>خطای اطلاعات</string>
+	<key>errorMobileRequiredValidationMessage</key>
+	<string>لطفا شماره موبایل خود را وارد کنید</string>
+	<key>errorMobileFormatValidationTitle</key>
+	<string>خطای اطلاعات</string>
+	<key>errorMobileFormatValidationMessage</key>
+	<string>لطفا شماره موبایل خود را تصحیح کنید</string>
 </dict>
 </plist>

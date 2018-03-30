@@ -11,14 +11,18 @@
 @implementation Media
 
 - (instancetype)initWithDto:(MediaResponse *)response {
-    self = [super init];
-    if (self) {
-        self.identity = response.identity;
-        self.url = response.url;
-        self.mediaType = response.mediaType;
-        self.name = response.name;
-    }
-    return self;
+    return [self initWithValue:
+            @{
+              @"id":@(response.id),
+              @"url":response.url,
+              @"mediaType":response.mediaType,
+              @"name":response.name
+              }];
+}
+
+#pragma mark - RLM Configs
++ (NSString *)primaryKey {
+    return @"id";
 }
 
 @end

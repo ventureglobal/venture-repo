@@ -11,9 +11,9 @@
 
 @interface MediaResponse : MTLModel <MTLJSONSerializing>
 
-@property (nonatomic) long identity;
-@property (strong, nonatomic) NSString *url;
-@property (strong, nonatomic) NSString *mediaType;
-@property (strong, nonatomic) NSString *name;
+@property (nonatomic) long id;
+@property (copy, nonatomic) NSString *url;
+@property (copy, nonatomic) NSString *mediaType;
+@property (copy, nonatomic) NSString *name;
 
 @end

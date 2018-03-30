@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CustomMessageBarViewController.h"
+#import "User.h"
 
 @interface UserManager : NSObject
 
@@ -20,8 +21,17 @@
 
 - (void)verifyMobileWithCode:(NSString *)verificationCode
                     deviceId:(long)deviceId
-                 success:(void (^)(void))success
-                 failure:(void (^)(NSError *error))failure
-      messageBarDelegate:(id<CustomMessageBarDelegate>) messageBarDalegate;
+                     success:(void (^)(void))success
+                     failure:(void (^)(NSError *error))failure
+          messageBarDelegate:(id<CustomMessageBarDelegate>) messageBarDalegate;
+
+- (void)getUser:(void (^)(User *user))success
+        failure:(void (^)(NSError *error))failure
+messageBarDelegate:(id<CustomMessageBarDelegate>) messageBarDalegate;
+
+- (void)updateUser:(User *)user
+           success:(void (^)(User *user))success
+           failure:(void (^)(NSError *error))failure
+messageBarDelegate:(id<CustomMessageBarDelegate>) messageBarDalegate;
 
 @end

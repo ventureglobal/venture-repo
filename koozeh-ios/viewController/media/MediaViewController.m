@@ -8,6 +8,7 @@
 
 #import "MediaViewController.h"
 #import "SessionManager.h"
+#import "MediaPlayerViewController.h"
 @import AVFoundation;
 @import AVKit;
 
@@ -29,6 +30,7 @@
             [self reloadVideo];
         }
     }
+    [self restrictRotation:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,14 +47,17 @@
     AVPlayer *player = [AVPlayer playerWithURL:videoURL];
     
     // create a player view controller
-    AVPlayerViewController *controller = [[AVPlayerViewController alloc]init];
+    MediaPlayerViewController *controller = [[MediaPlayerViewController alloc]init];
     controller.player = player;
     [player play];
+    
+//    [self.navigationController setNavigationBarHidden:YES animated:YES];
     
     // show the view controller
     [self addChildViewController:controller];
     [self.view addSubview:controller.view];
     controller.view.frame = self.view.frame;
+    [controller didMoveToParentViewController:self];
 }
 
 /*
@@ -63,6 +68,9 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+ */
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations  {
+     return UIInterfaceOrientationMaskAll;
+ }
 
 @end

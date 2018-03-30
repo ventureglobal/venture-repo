@@ -19,6 +19,14 @@
     return self;
 }
 
+- (AFHTTPRequestSerializer<AFURLRequestSerialization> *)requestSerializer {
+    NSString *token = [[NSUserDefaults standardUserDefaults] stringForKey: @"userToken"];
+    if (token != nil) {
+        [super.requestSerializer setValue:token forHTTPHeaderField:@"Authorization"];
+    }
+    return super.requestSerializer;
+}
+
 + (id)sharedInstance {
     @throw [NSException exceptionWithName:NSInternalInconsistencyException
                                    reason:[NSString stringWithFormat:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)]

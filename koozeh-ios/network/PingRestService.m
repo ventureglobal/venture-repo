@@ -31,7 +31,12 @@ static NSString *const kPublicPingPath = kContextUrl @"public/ping";
                  success(responseObject);
              }
              failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                 failure(error);
+                 if ([task.response isKindOfClass:[NSHTTPURLResponse class]] && ((NSHTTPURLResponse *)task.response).statusCode == 401) {
+                     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"userToken"];
+                     [self pingTestSuccess:success failure:failure];
+                 } else {
+                     failure(error);
+                 }
              }];
 }
 

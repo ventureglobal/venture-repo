@@ -12,7 +12,8 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "SessionManager.h"
 #import "IssueCollectionViewCell.h"
-#import "PageSliderViewController.h"
+#import "IssueViewController.h"
+#import "UIViewUtil.h"
 
 @interface IssuesViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *latestIssueImageButton;
@@ -32,9 +33,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.hidesBackButton = YES;
-    
-    [[IssueManager sharedInstance] fetchPublicDefaultIssues:^(NSArray<Issue *> *issues) {
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+    [self reloadIssues];
+    [super viewWillAppear:animated];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Private Methods
+- (void)reloadIssues {
+    [self showOverlayActivityIndicator];
+    [[IssueManager sharedInstance] fetchIssuesWithMagazine:self.magazine success:^(NSArray<Issue *> *issues) {
         self.issues = issues;
         [self.issuesCollectionView setTransform:CGAffineTransformMakeScale(-1, 1)];
         [self.issuesCollectionView reloadData];
@@ -43,8 +58,9 @@
         SDWebImageManager *manager = [SDWebImageManager sharedManager];
         [self.latestIssueImageButton setHidden:YES];
         [self.latestIssueFreeBadgeImageView setHighlighted:YES];
-        [self.latestIssueProgressView setHidden:NO];
         [self.latestIssueProgressView setProgress:0];
+        [self.latestIssueProgressView setHidden:NO];
+        [self hideOverlayActivityIndicator];
         [manager loadImageWithURL:url options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 float progress = ((float)receivedSize) / ((float) expectedSize);
@@ -67,21 +83,12 @@
             });
         }];
         for (Issue *issue in issues) {
-            NSLog(@"Got issue with id:%ld imageUrl:%@", issue.identity, issue.imageUrl);
+            NSLog(@"Got issue with id:%ld imageUrl:%@", issue.id, issue.imageUrl);
         }
     } failure:^(NSError *error) {
         NSLog(@"Error whild using issue manager:%@", [error localizedDescription]);
+        [UIViewUtil showUIAlertError:error fromController:self];
     } messageBarDelegate:self];
-}
-
-- (void) viewWillAppear:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:NO animated:NO];
-    [super viewWillAppear:animated];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Navigation
@@ -90,9 +97,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     if ([@"showIssueSegue" isEqualToString:segue.identifier]) {
-        PageSliderViewController *pageSiderViewController = segue.destinationViewController;
-        pageSiderViewController.issue = self.selectedIssue;
-        pageSiderViewController.issueVolume = self.selectedIssueVolume;
+        IssueViewController *issueViewController = segue.destinationViewController;
+        issueViewController.magazine = self.magazine;
+        issueViewController.issue = self.selectedIssue;
     }
     // Pass the selected object to the new view controller.
 }

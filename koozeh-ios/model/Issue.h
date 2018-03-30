@@ -7,17 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RLMObject.h"
+#import <Realm/Realm.h>
 #import "IssueResponse.h"
+#import "Page.h"
 
 @interface Issue : RLMObject
 
-@property long identity;
+@property long id;
 @property NSDate *date;
 @property NSString *imageUrl;
 @property NSString *thumbnailUrl;
-@property BOOL isOffline;
+@property RLMArray<Page *><Page> *pages;
+@property int issueNumber;
+@property long price;
+@property BOOL free;
+@property int pageCount;
+@property NSString *issueDescription;
+@property BOOL purchased;
 
 - (instancetype)initWithDto:(IssueResponse *)response;
 
 @end
+RLM_ARRAY_TYPE(Issue)

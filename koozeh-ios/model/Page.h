@@ -11,14 +11,16 @@
 #import "Media.h"
 #import "PageResponse.h"
 
-@interface Page : NSObject
+@interface Page : RLMObject
 
-@property long identity;
+@property long id;
 @property NSInteger pageNumber;
 @property NSString *imageUrl;
 @property NSString *thumbnailUrl;
-@property NSMutableArray<Media *> *medias;
+@property RLMArray<Media *><Media> *medias;
+@property BOOL bookmarked;
 
 - (instancetype)initWithDto:(PageResponse *)response;
 
 @end
+RLM_ARRAY_TYPE(Page)

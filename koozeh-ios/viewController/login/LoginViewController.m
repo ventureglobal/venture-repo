@@ -17,8 +17,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *inputTextField;
 @property (weak, nonatomic) IBOutlet UIButton *mainActionButton;
 @property (weak, nonatomic) IBOutlet UIButton *secondaryActionButton;
-@property (weak, nonatomic) IBOutlet UIView *overlayView;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorView;
 @property (weak, nonatomic) IBOutlet UIView *secondaryButtonOverlayView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *secondaryButtonActivityIndicator;
 @property (nonatomic) BOOL isLoginState;
@@ -52,7 +50,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-
+    [self.navigationController setNavigationBarHidden:YES];
+    [self initializeSignInViews];
 }
 
 #pragma mark - Private Methods
@@ -62,6 +61,8 @@
     [self.mainActionButton setTitle:[MessageUtil messageForKey:@"signInMainActionString"] forState:UIControlStateNormal];
     [self.secondaryActionButton setTitle:[MessageUtil messageForKey:@"signInSecondaryActionString"] forState:UIControlStateNormal];
     self.isLoginState = YES;
+    self.secondaryButtonActivityIndicator.hidden = YES;
+    self.secondaryButtonOverlayView.hidden = YES;
 }
 
 - (void)initializeVerifyMobileViews {
@@ -73,43 +74,53 @@
     self.isLoginState = NO;
 }
 
+- (void)showValidationError:(NSString *)errorKey {
+        NSError *validationError = [NSError errorWithDomain:@"ir.bina.koozeh-ios" code:1 userInfo:@{@"errorKey":errorKey}];
+    [UIViewUtil showUIAlertError:validationError fromController:self includeNetworkErrors:NO onClose:^{
+        [self hideOverlayActivityIndicator];
+    }];
+}
+
 - (void)mainActionMethod {
-    self.overlayView.hidden = NO;
-    self.activityIndicatorView.hidden = NO;
-    [self.activityIndicatorView startAnimating];
+    [self showOverlayActivityIndicator];
     if (self.isLoginState) {
-        self.mobile = self.inputTextField.text;
-        [[UserManager sharedInstance] signInWithMobile:self.inputTextField.text success:^(long deviceId) {
-            self.deviceId = deviceId;
-            NSLog(@"Got deviceId:%ld", deviceId);
-            self.overlayView.hidden = YES;
-            self.activityIndicatorView.hidden = YES;
-            [self.activityIndicatorView stopAnimating];
-            [self initializeVerifyMobileViews];
-            [self disableRetry];
-        } failure:^(NSError *error) {
-            NSLog(@"Error whild using user manager:%@", [error localizedDescription]);
-            self.overlayView.hidden = YES;
-            self.activityIndicatorView.hidden = YES;
-            [self.activityIndicatorView stopAnimating];
-            [UIViewUtil showUIAlertError:error fromController:self];
-        } messageBarDelegate:self];
+        if (self.inputTextField.text.length > 0) {
+            NSString *firstChar = [self.inputTextField.text substringToIndex:1];
+            if ([@"0" isEqualToString:firstChar] || [@"1" isEqualToString:firstChar]) {
+                self.mobile = self.inputTextField.text;
+                [[UserManager sharedInstance] signInWithMobile:self.inputTextField.text success:^(long deviceId) {
+                    self.deviceId = deviceId;
+                    NSLog(@"Got deviceId:%ld", deviceId);
+                    [self hideOverlayActivityIndicator];
+                    [self initializeVerifyMobileViews];
+                    [self disableRetry];
+                } failure:^(NSError *error) {
+                    NSLog(@"Error whild using user manager:%@", [error localizedDescription]);
+                    [self hideOverlayActivityIndicator];
+                    [UIViewUtil showUIAlertError:error fromController:self];
+                } messageBarDelegate:self];
+            } else {
+                [self showValidationError:@"MobileFormatValidation"];
+            }
+        } else {
+            [self showValidationError:@"MobileRequiredValidation"];
+        }
     } else {
-        [[UserManager sharedInstance]
-         verifyMobileWithCode:self.inputTextField.text
-         deviceId:self.deviceId
-         success:^{
-             [self performSegueWithIdentifier:@"showMainViewSegue" sender:nil];
-             self.overlayView.hidden = YES;
-             self.activityIndicatorView.hidden = YES;
-             [self.activityIndicatorView stopAnimating];
-         } failure:^(NSError *error) {
-             [self initializeVerifyMobileViews];
-             [UIViewUtil showUIAlertError:error fromController:self];
-             self.overlayView.hidden = YES;
-             self.activityIndicatorView.hidden = YES;
-             [self.activityIndicatorView stopAnimating];
-         } messageBarDelegate:self];
+        if (self.inputTextField.text.length > 0) {
+            [[UserManager sharedInstance]
+             verifyMobileWithCode:self.inputTextField.text
+             deviceId:self.deviceId
+             success:^{
+                 [self performSegueWithIdentifier:@"showMainViewSegue" sender:nil];
+                 [self hideOverlayActivityIndicator];
+             } failure:^(NSError *error) {
+                 [self initializeVerifyMobileViews];
+                 [UIViewUtil showUIAlertError:error fromController:self];
+                 [self hideOverlayActivityIndicator];
+             } messageBarDelegate:self];
+        } else {
+            [self showValidationError:@"CodeRequiredValidation"];
+        }
     }
 }
 
@@ -151,30 +162,25 @@
     if (self.isLoginState) {
         [self performSegueWithIdentifier:@"showMainViewSegue" sender:nil];
     } else {
-        self.overlayView.hidden = NO;
-        [self.activityIndicatorView startAnimating];
-        self.activityIndicatorView.hidden = NO;
-        [self disableRetry];
-        [[UserManager sharedInstance] signInWithMobile:self.mobile success:^(long deviceId) {
-            self.deviceId = deviceId;
-            NSLog(@"Got deviceId:%ld", deviceId);
-            self.overlayView.hidden = YES;
-            self.activityIndicatorView.hidden = YES;
-            [self.activityIndicatorView stopAnimating];
-        } failure:^(NSError *error) {
-            NSLog(@"Error whild using user manager:%@", [error localizedDescription]);
-            self.overlayView.hidden = YES;
-            self.activityIndicatorView.hidden = YES;
-            [self.activityIndicatorView stopAnimating];
-            [UIViewUtil showUIAlertError:error fromController:self];
-        } messageBarDelegate:self];
+        [self initializeSignInViews];
+        self.inputTextField.text = self.mobile;
+//        [self showOverlayActivityIndicator];
+//        [self disableRetry];
+//        [[UserManager sharedInstance] signInWithMobile:self.mobile success:^(long deviceId) {
+//            self.deviceId = deviceId;
+//            NSLog(@"Got deviceId:%ld", deviceId);
+//            [self hideOverlayActivityIndicator];
+//        } failure:^(NSError *error) {
+//            NSLog(@"Error whild using user manager:%@", [error localizedDescription]);
+//            [self hideOverlayActivityIndicator];
+//            [UIViewUtil showUIAlertError:error fromController:self];
+//        } messageBarDelegate:self];
     }
 }
 
 -(void)keyboardDoneAction {
     NSLog(@"Done button clicked");
     [self.inputTextField endEditing:YES];
-    [self mainActionMethod];
 }
 
 @end

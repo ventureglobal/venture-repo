@@ -17,6 +17,8 @@
 
 + (UIColor *)navBarBackColor;
 
++ (UIColor *)overlayBackgroundColor;
+
 + (UIColor *)messageBarTextColor;
 + (UIColor *)messageBarBackColor;
 
@@ -30,4 +32,17 @@
 
 + (UIColor *)mediaImageButtonColor;
 
++ (UIColor *)navBarItemActiveColor;
++ (UIColor *)navBarItemDefaultColor;
+
++ (UIColor *)thumbnailBacgroundColor;
+
++ (UIColor *)progressViewColor;
++ (UIColor *)profileTitntColor;
+
++ (UIColor *)cancelColor;
+
++ (UIColor *)showcaseBackgroundColor;
++ (UIColor *)showcaseTitleColor;
++ (UIColor *)showcaseMessageColor;
 @end

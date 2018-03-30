@@ -7,22 +7,36 @@
 //
 
 #import "Page.h"
+#import "MediaResponse.h"
 
 @implementation Page
 
 - (instancetype)initWithDto:(PageResponse *)response {
-    self = [super init];
+    self = [self initWithValue:
+            @{
+              @"id":@(response.id),
+              @"pageNumber":@(response.pageNumber),
+              @"imageUrl":response.imageUrl,
+              @"thumbnailUrl":response.thumbnailUrl,
+              @"bookmarked":@(response.bookmarked)
+              }];
     if (self) {
-        self.identity = response.identity;
-        self.pageNumber = response.pageNumber;
-        self.imageUrl = response.imageUrl;
-        self.thumbnailUrl = response.thumbnailUrl;
-        self.medias = [NSMutableArray array];
         for (MediaResponse *mediaResponse in response.medias) {
-            [self.medias addObject:[[Media alloc] initWithDto:mediaResponse]];
+            if (mediaResponse.id != 0) {
+                [self.medias addObject:[[Media alloc] initWithDto:mediaResponse]];
+            }
         }
     }
     return self;
+}
+
+#pragma mark - RLM Configs
++ (NSString *)primaryKey {
+    return @"id";
+}
+
++ (NSArray<NSString *> *)indexedProperties {
+    return @[@"pageNumber"];
 }
 
 @end

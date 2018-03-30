@@ -11,7 +11,7 @@
 
 @interface Media : RLMObject
 
-@property long identity;
+@property long id;
 @property NSString *url;
 @property NSString *mediaType;
 @property NSString *name;
@@ -19,3 +19,4 @@
 - (instancetype)initWithDto:(MediaResponse *)response;
 
 @end
+RLM_ARRAY_TYPE(Media)

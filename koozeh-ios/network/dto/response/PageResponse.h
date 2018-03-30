@@ -12,10 +12,11 @@
 
 @interface PageResponse : MTLModel <MTLJSONSerializing>
 
-@property (nonatomic) long identity;
+@property (nonatomic) long id;
 @property (nonatomic) NSInteger pageNumber;
-@property (strong, nonatomic) NSString *imageUrl;
-@property (strong, nonatomic) NSString *thumbnailUrl;
-@property (strong, nonatomic) NSArray<MediaResponse *> *medias;
+@property (copy, nonatomic) NSString *imageUrl;
+@property (copy, nonatomic) NSString *thumbnailUrl;
+@property (copy, nonatomic) NSArray<MediaResponse *> *medias;
+@property (nonatomic) BOOL bookmarked;
 
 @end

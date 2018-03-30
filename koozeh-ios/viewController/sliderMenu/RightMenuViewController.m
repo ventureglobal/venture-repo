@@ -13,6 +13,11 @@
 #import "IssuesViewController.h"
 #import "UIFont+FontUtil.h"
 #import "UIColor+ColorUtil.h"
+#import "MagazineCollectionViewController.h"
+#import "BookmarksViewController.h"
+#import "AboutViewController.h"
+#import "UserProfileViewController.h"
+#import "SupportViewController.h"
 
 @interface RightMenuViewController ()
 
@@ -130,14 +135,47 @@ static NSInteger const ROW_HEIGHT = 46;
         if (indexPath.row == 0) {
             if (![[SlideNavigationController sharedInstance].topViewController isKindOfClass:[IssuesViewController class]]) {
                 for (UIViewController *viewController in [SlideNavigationController sharedInstance].viewControllers) {
-                    if ([viewController isKindOfClass:[IssuesViewController class]]) {
+                    if ([viewController isKindOfClass:[MagazineCollectionViewController class]]) {
                         [[SlideNavigationController sharedInstance] popToViewController:viewController animated:YES];
-                        break;
+                        return;
                     }
                 }
             }
         } else if (indexPath.row == 1) {
+            for (UIViewController *viewController in [SlideNavigationController sharedInstance].viewControllers) {
+                if ([viewController isKindOfClass:[BookmarksViewController class]]) {
+                    [[SlideNavigationController sharedInstance] popToViewController:viewController animated:YES];
+                    return;
+                }
+            }
+            UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"bookmarksViewController"];
+            [[SlideNavigationController sharedInstance] pushViewController:viewController animated:YES];
+        } else if (indexPath.row == 2) {
+            for (UIViewController *viewController in [SlideNavigationController sharedInstance].viewControllers) {
+                if ([viewController isKindOfClass:[UserProfileViewController class]]) {
+                    [[SlideNavigationController sharedInstance] popToViewController:viewController animated:YES];
+                    return;
+                }
+            }
+            UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"userProfileViewController"];
+            [[SlideNavigationController sharedInstance] pushViewController:viewController animated:YES];
+        } else if (indexPath.row == 3) {
+            for (UIViewController *viewController in [SlideNavigationController sharedInstance].viewControllers) {
+                if ([viewController isKindOfClass:[AboutViewController class]]) {
+                    [[SlideNavigationController sharedInstance] popToViewController:viewController animated:YES];
+                    return;
+                }
+            }
             UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"aboutViewController"];
+            [[SlideNavigationController sharedInstance] pushViewController:viewController animated:YES];
+        } else if (indexPath.row == 4) {
+            for (UIViewController *viewController in [SlideNavigationController sharedInstance].viewControllers) {
+                if ([viewController isKindOfClass:[SupportViewController class]]) {
+                    [[SlideNavigationController sharedInstance] popToViewController:viewController animated:YES];
+                    return;
+                }
+            }
+            UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"supportViewController"];
             [[SlideNavigationController sharedInstance] pushViewController:viewController animated:YES];
         }
     }];

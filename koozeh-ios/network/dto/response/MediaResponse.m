@@ -13,7 +13,7 @@
 #pragma mark - Mantle JSONKeyPathsByPropertyKey
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
-             @"identity":@"id",
+             @"id":@"id",
              @"url":@"url",
              @"mediaType":@"mediaType",
              @"name":@"name"

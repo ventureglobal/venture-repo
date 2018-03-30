@@ -15,6 +15,8 @@
 - (CGPoint)customMessageBarPosition;
 - (void)checkInternetConnection;
 - (void)hideInternetConnectionError;
+- (void)showMessageBarForKey:(NSString *)messageKey;
+- (void)hideMessageBarForKey:(NSString *)messageKey;
 
 @end
 @interface CustomMessageBarViewController : UIViewController <CustomMessageBarDelegate>
@@ -23,5 +25,9 @@
 - (void)hideInternetConnectionError;
 - (void)showMessageBarForKey:(NSString *)messageKey;
 - (void)hideMessageBarForKey:(NSString *)messageKey;
+
+- (void)showOverlayActivityIndicator;
+- (void)hideOverlayActivityIndicator;
+- (void)restrictRotation:(BOOL)restriction;
 
 @end

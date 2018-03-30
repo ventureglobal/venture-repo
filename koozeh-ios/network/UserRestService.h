@@ -10,6 +10,7 @@
 #import "SessionManager.h"
 #import "SignInResponse.h"
 #import "VerifyDeviceResponse.h"
+#import "UserResponse.h"
 
 @interface UserRestService : SessionManager
 
@@ -22,5 +23,17 @@
                                       deviceId:(long)deviceId
                                        success:(void (^)(VerifyDeviceResponse *response))success
                                        failure:(void (^)(NSError *error))failure;
+
+- (NSURLSessionDataTask *)getUser:(void (^)(UserResponse *response))success
+                          failure:(void (^)(NSError *error))failure;
+
+- (NSURLSessionDataTask *)updateUserFirstName:(NSString *)firstName
+                                     lastName:(NSString *)lastName
+                                        email:(NSString *)email
+                          birthdateJalaliYear:(NSNumber *)birthdateJalaliYear
+                         birthdateJalaliMonth:(NSNumber *)birthdateJalaliMonth
+                           birthdateJalaliDay:(NSNumber *)birthdateJalaliDay
+                                      success:(void (^)(UserResponse *response))success
+                          failure:(void (^)(NSError *error))failure;
 
 @end

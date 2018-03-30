@@ -38,6 +38,7 @@
 }
 
 - (void)reloadIssue {
+    self.imageView.image = [UIImage imageNamed:@"placeHolder"];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", kBaseStorageURL, self.issue.thumbnailUrl]];
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
     [manager loadImageWithURL:url options:0 progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
@@ -45,7 +46,7 @@
             [self.imageView setImage:image];
             CGRect imageFrame = AVMakeRectWithAspectRatioInsideRect(image.size, self.imageView.frame);
             [self.imageView setFrame:imageFrame];
-            [self.freeBadgeImageView setFrame:CGRectMake(imageFrame.origin.x, imageFrame.origin.y, imageFrame.size.width/2, imageFrame.size.width/2)];
+//            [self.freeBadgeImageView setFrame:CGRectMake(imageFrame.origin.x, imageFrame.origin.y, imageFrame.size.width/2, imageFrame.size.width/2)];
         });
     }];
 }

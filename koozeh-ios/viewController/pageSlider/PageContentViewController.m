@@ -9,10 +9,12 @@
 #import "PageContentViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "SessionManager.h"
-#import "LGPlusButtonsView.h"
+#import <LGPlusButtonsView/LGPlusButtonsView.h>
 #import "UIColor+ColorUtil.h"
 #import <AVFoundation/AVFoundation.h>
 #import "UIFont+FontUtil.h"
+#import "UIViewUtil.h"
+#import "MessageUtil.h"
 
 @interface PageContentViewController ()
 
@@ -63,16 +65,24 @@
             self.pageImageProgressLabel.text = [NSString stringWithFormat:@"%ld%@", (long)(progress * 100), @"%"];
         });
     } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.pageImageProgressView setHidden:YES];
-            [self.pageImageProgressLabel setHidden:YES];
-            [self.pageImageView setImage:image];
-        });
+        if (image != nil) {
+            if (cacheType == SDImageCacheTypeNone) {
+                [self.messageBarDelegate hideInternetConnectionError];
+            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.pageImageProgressView setHidden:YES];
+                [self.pageImageProgressLabel setHidden:YES];
+                [self.pageImageView setImage:image];
+            });
+        } else if (error != nil) {
+            [self.messageBarDelegate checkInternetConnection];
+        }
     }];
 }
 
 - (void)reloadPageMediaOptions {
     if (self.page.medias.count) {
+        
         self.mediaOptionsButtonView =
         [LGPlusButtonsView plusButtonsViewWithNumberOfButtons:(self.page.medias.count + 1)
                                       firstButtonIsPlusButton:YES
@@ -154,6 +164,20 @@
         
 //        [self.navigationController.view addSubview:_plusButtonsViewMain];
         [self.view addSubview:self.mediaOptionsButtonView];
+        
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        BOOL pageContentMediaShowcaseViewed = [userDefaults boolForKey:@"pageContentMediaShowcaseViewed"];
+//        if (!pageContentMediaShowcaseViewed) {
+//            [UIViewUtil showcaseWithTitle:[MessageUtil messageForKey:@"pageContentMediaShowcaseTitle"]
+//                              withMessage:[MessageUtil messageForKey:@"pageContentMediaShowcaseMessage"]
+//                                 withView:[self.mediaOptionsButtonView button]
+//                               completion:^{
+//                                   self.mediaButtonPlaceHolder.hidden = YES;
+//                               }];
+//            [userDefaults setBool:YES forKey:@"pageContentMediaShowcaseViewed"];
+//            [userDefaults synchronize];
+//        }
+
     }
 }
 

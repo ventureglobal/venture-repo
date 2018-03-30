@@ -16,6 +16,6 @@
 
 - (NSURLSessionDataTask *)getPublicDefaultIssues:(void (^)(NSArray<IssueResponse *> *response))success failure:(void (^)(NSError *error))failure;
 
-- (NSURLSessionDataTask *)getPublicPagesForIssue:(Issue *)issue success:(void (^)(NSArray<PageResponse *> *response))success failure:(void (^)(NSError *error))failure;
+- (NSURLSessionDataTask *)getPublicIssuesWithMagazine:(long)magazineId success:(void (^)(NSArray<IssueResponse *> *response))success failure:(void (^)(NSError *error))failure;
 
 @end

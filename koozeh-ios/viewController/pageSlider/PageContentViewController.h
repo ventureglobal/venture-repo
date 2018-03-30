@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Page.h"
 #import "Media.h"
-#import <LGPlusButton.h>
+#import <LGPlusButtonsView/LGPlusButtonsView.h>
 #import <AVFoundation/AVFoundation.h>
+#import "CustomMessageBarViewController.h"
 
 @protocol PageMediaDelegate <NSObject>
 
@@ -22,5 +23,6 @@
 @property (nonatomic) NSUInteger pageIndex;
 @property (weak, nonatomic) Page *page;
 @property (weak, nonatomic) id<PageMediaDelegate> pageMediaDelegate;
+@property (weak, nonatomic) id<CustomMessageBarDelegate> messageBarDelegate;
 
 @end

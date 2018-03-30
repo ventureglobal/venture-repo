@@ -10,6 +10,7 @@
 #import "Issue.h"
 #import "Page.h"
 #import "CustomMessageBarViewController.h"
+#import "Magazine.h"
 
 @interface IssueManager : NSObject
 
@@ -19,9 +20,9 @@
                          failure:(void (^)(NSError *error))failure
               messageBarDelegate:(id<CustomMessageBarDelegate>) messageBarDalegate;
 
-- (void)fetchPublicPagesForIssue:(Issue *)issue
-                         success:(void (^)(NSArray<Page *> *))success
-                         failure:(void (^)(NSError *))failure
-              messageBarDelegate:(id<CustomMessageBarDelegate>) messageBarDalegate;
+- (void)fetchIssuesWithMagazine:(Magazine *)magazine
+                        success:(void (^)(NSArray<Issue *> *issues))success
+                        failure:(void (^)(NSError *error))failure
+             messageBarDelegate:(id<CustomMessageBarDelegate>) messageBarDalegate;
 
 @end

@@ -7,14 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MTLModel.h"
 #import <Mantle/Mantle.h>
 
 @interface IssueResponse : MTLModel <MTLJSONSerializing>
 
-@property (nonatomic) long identity;
+@property (nonatomic) long id;
 @property (copy, nonatomic) NSDate *date;
 @property (copy, nonatomic) NSString *imageUrl;
 @property (copy,nonatomic) NSString *thumbnailUrl;
+@property (nonatomic) int issueNumber;
+@property (nonatomic) long price;
+@property (nonatomic) BOOL free;
+@property (nonatomic) int pageCount;
+@property (copy,nonatomic) NSString *issueDescription;
+@property (nonatomic) BOOL purchased;
+
 
 @end

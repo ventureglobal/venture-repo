@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "CustomNavigationBarViewController.h"
+#import "Magazine.h"
 
 @interface IssuesViewController : CustomNavigationBarViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+
+@property (strong, nonatomic) Magazine *magazine;
 
 @end
