@@ -91,4 +91,8 @@
     return [self whiteColor];
 }
 
++ (UIColor *)counterColor {
+    return [UIColor colorWithRed:188.0/255.0 green:200.0/255.0 blue:201.0/255.0 alpha:1.0];
+}
+
 @end

@@ -12,6 +12,7 @@
 #import "Magazine.h"
 #import "UIViewUtil.h"
 #import "IssuesViewController.h"
+#import "UIColor+ColorUtil.h"
 
 @interface MagazineCollectionViewController ()
 
@@ -41,7 +42,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.collectionView registerClass:MagazineCollectionViewCell.class forCellWithReuseIdentifier:reuseIdentifier];
-    self.collectionView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"counterBackground"]];
+    self.collectionView.backgroundColor = [UIColor counterColor];
     [self reloadMagazines];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
     [super viewWillAppear:animated];

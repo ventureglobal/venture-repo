@@ -44,9 +44,9 @@
         float y = self.contentView.frame.origin.y + self.contentView.frame.size.height - 35;
         CGRect frame = CGRectMake(x, y, self.contentView.frame.size.width, 35);
         _magazineNameLabel = [[UILabel alloc] initWithFrame:frame];
-        _magazineNameLabel.font = [UIFont shabnamWithSize:20.0];
+        _magazineNameLabel.font = [UIFont mainRegularFontWithSize:18.0];
         _magazineNameLabel.textAlignment = NSTextAlignmentCenter;
-        _magazineNameLabel.textColor = [UIColor generalLogoColor];
+        _magazineNameLabel.textColor = [UIColor darkGrayColor];
         [self.contentView addSubview:_magazineNameLabel];
     }
     return _magazineNameLabel;

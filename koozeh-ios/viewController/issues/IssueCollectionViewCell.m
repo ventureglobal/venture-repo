@@ -10,6 +10,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <AVFoundation/AVFoundation.h>
 #import "SessionManager.h"
+#import "MessageUtil.h"
 
 @interface IssueCollectionViewCell ()
 
@@ -24,12 +25,14 @@
 - (void)setIssue:(Issue *)issue {
     _issue = issue;
     [self.contentView setTransform:CGAffineTransformMakeScale(-1, 1)];
-    [self reloadIssue];
-    NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:self.priceLabel.text];
-    [attributeString addAttribute:NSStrikethroughStyleAttributeName
-                            value:@1
-                            range:NSMakeRange(0, [attributeString length])];
+    NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%ld %@", issue.price, [MessageUtil messageForKey:@"defaultCurrency"]]];
+    if (issue.free) {
+        [attributeString addAttribute:NSStrikethroughStyleAttributeName
+                                value:@1
+                                range:NSMakeRange(0, [attributeString length])];
+    }
     [self.priceLabel setAttributedText:attributeString];
+    [self reloadIssue];
 }
 
 - (void)setIssueVolume:(NSInteger)issueVolume {

@@ -45,4 +45,6 @@
 + (UIColor *)showcaseBackgroundColor;
 + (UIColor *)showcaseTitleColor;
 + (UIColor *)showcaseMessageColor;
+
++ (UIColor *)counterColor;
 @end

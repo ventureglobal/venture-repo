@@ -14,6 +14,7 @@
 #import "IssueCollectionViewCell.h"
 #import "IssueViewController.h"
 #import "UIViewUtil.h"
+#import "MessageUtil.h"
 
 @interface IssuesViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *latestIssueImageButton;
@@ -61,6 +62,16 @@
         [self.latestIssueProgressView setProgress:0];
         [self.latestIssueProgressView setHidden:NO];
         [self hideOverlayActivityIndicator];
+        
+        self.latestIssueVolumeLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.issues.count - 1];
+        NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%ld %@", [self.issues firstObject].price, [MessageUtil messageForKey:@"defaultCurrency"]]];
+        if ([self.issues firstObject].free) {
+            [attributeString addAttribute:NSStrikethroughStyleAttributeName
+                                    value:@1
+                                    range:NSMakeRange(0, [attributeString length])];
+        }
+        [self.latestIssuePriceLabel setAttributedText:attributeString];
+        
         [manager loadImageWithURL:url options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 float progress = ((float)receivedSize) / ((float) expectedSize);
@@ -68,14 +79,7 @@
             });
         } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.latestIssueVolumeLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.issues.count - 1];
-                NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:self.latestIssuePriceLabel.text];
-                [attributeString addAttribute:NSStrikethroughStyleAttributeName
-                                        value:@1
-                                        range:NSMakeRange(0, [attributeString length])];
-                [self.latestIssuePriceLabel setAttributedText:attributeString];
                 [self.latestIssueImageButton setImage:image forState:UIControlStateNormal];
-                
                 [self.latestIssueImageButton setHidden:NO];
                 [self.latestIssueFreeBadgeImageView setHidden:NO];
                 [self.latestIssueProgressView setHidden:YES];

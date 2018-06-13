@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wKx-gx-nof">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wKx-gx-nof">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -42,7 +42,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کـوزه، بستـري براي عرضـه مجلـه‌هاي آنلايـن" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="917-ik-cXo">
-                                        <rect key="frame" x="123" y="99" width="228" height="26"/>
+                                        <rect key="frame" x="82" y="99" width="269" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25.5" id="7S9-pU-89V"/>
                                         </constraints>
@@ -295,43 +295,43 @@
                                 <rect key="frame" x="152" y="50" width="70" height="70"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نام و نام‌خانوادگی:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEU-WQ-Vov">
-                                <rect key="frame" x="116" y="188" width="144.5" height="26"/>
+                                <rect key="frame" x="108" y="199.5" width="159" height="36"/>
                                 <fontDescription key="fontDescription" name="Shabnam" family="Shabnam" pointSize="22"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اسم شما" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMg-y9-Pqm">
-                                <rect key="frame" x="143" y="224" width="89.5" height="33"/>
+                                <rect key="frame" x="138.5" y="245.5" width="98.5" height="46"/>
                                 <fontDescription key="fontDescription" name="Shabnam" family="Shabnam" pointSize="28"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تاریخ تولد:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIa-RN-wTS">
-                                <rect key="frame" x="148.5" y="272" width="80" height="26"/>
+                                <rect key="frame" x="141.5" y="306.5" width="92.5" height="36"/>
                                 <fontDescription key="fontDescription" name="Shabnam" family="Shabnam" pointSize="22"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۳ خرداد ۱۳۶۷" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLL-qg-CQr">
-                                <rect key="frame" x="115" y="308" width="145" height="33"/>
+                                <rect key="frame" x="108.5" y="352.5" width="158" height="46"/>
                                 <fontDescription key="fontDescription" name="Shabnam" family="Shabnam" pointSize="28"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ایمیل:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mF-Rc-9ud">
-                                <rect key="frame" x="165" y="355.5" width="46" height="26"/>
+                                <rect key="frame" x="160.5" y="413" width="55.5" height="36"/>
                                 <fontDescription key="fontDescription" name="Shabnam" family="Shabnam" pointSize="22"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info@koozeh.ir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWF-Tf-wZr">
-                                <rect key="frame" x="109.5" y="391.5" width="157" height="28"/>
+                                <rect key="frame" x="107.5" y="459" width="161" height="39.5"/>
                                 <fontDescription key="fontDescription" name="Shabnam" family="Shabnam" pointSize="24"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9o-Ts-Hlk">
-                                <rect key="frame" x="30" y="598" width="315" height="39"/>
+                                <rect key="frame" x="30" y="587" width="315" height="50"/>
                                 <fontDescription key="fontDescription" name="Shabnam" family="Shabnam" pointSize="23"/>
                                 <state key="normal" title="ویرایش">
                                     <color key="titleColor" red="0.29519221186637878" green="0.49986070394515991" blue="0.61187744140625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -342,7 +342,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09102105754" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euq-Jn-YNf">
-                                <rect key="frame" x="113.5" y="145" width="147" height="28"/>
+                                <rect key="frame" x="116.5" y="145" width="141" height="39.5"/>
                                 <fontDescription key="fontDescription" name="Shabnam" family="Shabnam" pointSize="24"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -397,31 +397,31 @@
                                 <rect key="frame" x="152.5" y="50" width="70" height="70"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نام و نام‌خانوادگی:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4z-gS-tH5">
-                                <rect key="frame" x="116" y="188.5" width="144.5" height="26"/>
+                                <rect key="frame" x="108" y="200" width="159" height="36"/>
                                 <fontDescription key="fontDescription" name="Shabnam" family="Shabnam" pointSize="22"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تاریخ تولد:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbo-lr-c2w">
-                                <rect key="frame" x="148" y="305.5" width="80" height="26"/>
+                                <rect key="frame" x="142" y="331" width="92.5" height="36"/>
                                 <fontDescription key="fontDescription" name="Shabnam" family="Shabnam" pointSize="22"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ایمیل:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMc-z9-3kq">
-                                <rect key="frame" x="165.5" y="427.5" width="46" height="26"/>
+                                <rect key="frame" x="160" y="463" width="55.5" height="36"/>
                                 <fontDescription key="fontDescription" name="Shabnam" family="Shabnam" pointSize="22"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09102105754" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1b8-7t-lTa">
-                                <rect key="frame" x="114" y="145" width="147" height="28"/>
+                                <rect key="frame" x="117" y="145" width="141" height="39.5"/>
                                 <fontDescription key="fontDescription" name="Shabnam" family="Shabnam" pointSize="24"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XOs-dC-yoR">
-                                <rect key="frame" x="16" y="222.5" width="343" height="30"/>
+                                <rect key="frame" x="16" y="244" width="343" height="32"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Shabnam" family="Shabnam" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -430,7 +430,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام‌خانوادگی" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iKq-Jm-sQ0">
-                                <rect key="frame" x="16" y="260.5" width="343" height="30"/>
+                                <rect key="frame" x="16" y="284" width="343" height="32"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Shabnam" family="Shabnam" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -439,7 +439,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d3n-sJ-9Jc">
-                                <rect key="frame" x="16" y="461.5" width="343" height="30"/>
+                                <rect key="frame" x="16" y="507" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -448,7 +448,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcQ-PG-wMu">
-                                <rect key="frame" x="192.5" y="598" width="152.5" height="39"/>
+                                <rect key="frame" x="192.5" y="587" width="152.5" height="50"/>
                                 <fontDescription key="fontDescription" name="Shabnam" family="Shabnam" pointSize="23"/>
                                 <state key="normal" title="ذخیره">
                                     <color key="titleColor" red="0.2951922119" green="0.49986070389999998" blue="0.6118774414" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -459,7 +459,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyc-E6-WU0">
-                                <rect key="frame" x="30" y="598" width="152.5" height="39"/>
+                                <rect key="frame" x="30" y="587" width="152.5" height="50"/>
                                 <fontDescription key="fontDescription" name="Shabnam" family="Shabnam" pointSize="23"/>
                                 <state key="normal" title="انصراف">
                                     <color key="titleColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -470,7 +470,7 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsh-9k-GlB">
-                                <rect key="frame" x="28" y="339.5" width="320" height="80"/>
+                                <rect key="frame" x="28" y="375" width="320" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="tqX-JR-Plc"/>
                                 </constraints>
@@ -607,22 +607,22 @@
                                         <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </progressView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۵۰۰۰ تومان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfC-ze-7hj">
-                                        <rect key="frame" x="162" y="410.5" width="53" height="15.5"/>
+                                        <rect key="frame" x="159.5" y="444" width="56.5" height="22"/>
                                         <fontDescription key="fontDescription" name="Samim" family="Samim" pointSize="13"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TDV-0l-UW1">
-                                        <rect key="frame" x="166.5" y="389" width="42.5" height="16.5"/>
+                                        <rect key="frame" x="143.5" y="389" width="89" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۹" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMg-44-Yfm">
-                                                <rect key="frame" x="0.0" y="0.0" width="7.5" height="16.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMg-44-Yfm">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <fontDescription key="fontDescription" name="Samim" family="Samim" pointSize="14"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61d-YS-Lfb">
-                                                <rect key="frame" x="12.5" y="0.0" width="30" height="16.5"/>
+                                                <rect key="frame" x="55" y="0.0" width="34" height="50"/>
                                                 <fontDescription key="fontDescription" name="Samim" family="Samim" pointSize="14"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -689,19 +689,19 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVn-Dg-V1y">
-                                                    <rect key="frame" x="89" y="173" width="26" height="14"/>
+                                                    <rect key="frame" x="86" y="173" width="29" height="20.5"/>
                                                     <fontDescription key="fontDescription" name="Samim" family="Samim" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۹" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sd-3m-cDI">
-                                                    <rect key="frame" x="78" y="173" width="7" height="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sd-3m-cDI">
+                                                    <rect key="frame" x="82" y="183.5" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="Samim" family="Samim" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۵۰۰۰ تومان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kT0-On-TjM">
-                                                    <rect key="frame" x="70" y="190" width="45" height="13"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kT0-On-TjM">
+                                                    <rect key="frame" x="115" y="190" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="Samim" family="Samim" pointSize="11"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -826,7 +826,7 @@
                                             <rect key="frame" x="329" y="3.5" width="36" height="36"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="پیشخوان" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Un-fN-Ms9">
-                                            <rect key="frame" x="257" y="10" width="62" height="23.5"/>
+                                            <rect key="frame" x="246.5" y="5" width="72.5" height="34"/>
                                             <fontDescription key="fontDescription" name="Samim" family="Samim" pointSize="20"/>
                                             <color key="textColor" red="0.51764705882352935" green="0.51764705882352935" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -884,7 +884,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIw-Xa-ohy">
-                                <rect key="frame" x="10" y="632.5" width="36" height="36"/>
+                                <rect key="frame" x="10" y="627.5" width="43" height="46"/>
                                 <fontDescription key="fontDescription" name="Samim" family="Samim" pointSize="20"/>
                                 <state key="normal" title="بعدی">
                                     <color key="titleColor" red="0.89411764709999997" green="0.78039215689999997" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -966,13 +966,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عضویــت در کــوزه" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96d-BS-Y8Y">
-                                <rect key="frame" x="98" y="124" width="180.5" height="33"/>
+                                <rect key="frame" x="94" y="124" width="187" height="46"/>
                                 <fontDescription key="fontDescription" name="Shabnam" family="Shabnam" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شمــاره همــراه" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJh-Sh-UmN">
-                                <rect key="frame" x="131" y="242.5" width="113.5" height="26"/>
+                                <rect key="frame" x="130" y="232.5" width="115.5" height="36"/>
                                 <fontDescription key="fontDescription" name="Shabnam" family="Shabnam" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1043,7 +1043,7 @@
         <!--Page View Controller-->
         <scene sceneID="sCA-xI-TNW">
             <objects>
-                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" doubleSided="YES" id="Lsg-SA-Vxp" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="none" id="Lsg-SA-Vxp" sceneMemberID="viewController">
                     <connections>
                         <segue destination="Ki9-xT-Te8" kind="show" identifier="showPageContent" id="IGM-vK-Thb"/>
                     </connections>
@@ -1078,19 +1078,19 @@
                                             <rect key="frame" x="5" y="0.0" width="99" height="111"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="صفحه" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbb-Sd-vlK">
-                                            <rect key="frame" x="68" y="111" width="36" height="19"/>
+                                            <rect key="frame" x="64" y="103.5" width="40" height="26.5"/>
                                             <fontDescription key="fontDescription" name="Shabnam" family="Shabnam" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esB-W1-bKH">
-                                            <rect key="frame" x="58.5" y="111" width="7.5" height="19"/>
+                                            <rect key="frame" x="56" y="103.5" width="6" height="26.5"/>
                                             <fontDescription key="fontDescription" name="Shabnam" family="Shabnam" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fabIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hVb-Cr-u2B">
-                                            <rect key="frame" x="5" y="106" width="30" height="30"/>
+                                            <rect key="frame" x="5" y="102.5" width="30" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="1ac-nK-3hH"/>
                                                 <constraint firstAttribute="width" constant="30" id="cmi-S6-RgG"/>

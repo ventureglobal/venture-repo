@@ -33,8 +33,10 @@
 	<string>شماره</string>
 	<key>defaultMagazineName</key>
 	<string>انار</string>
+	<key>defaultCurrency</key>
+	<string>تومان</string>
 	<key>versionString</key>
-	<string>نسخه ۲.۰.۰</string>
+	<string>نسخه ۲.۰.۱</string>
 	<key>copyRightString</key>
 	<string>© 2017 Koozeh Inst. All Rights Reserved</string>
 	<key>signInLabelString</key>
